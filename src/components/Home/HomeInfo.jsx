@@ -111,13 +111,7 @@ const HomeInfo = () => {
       }}
     >
       {/* Decorative elements */}
-      <motion.div
-        className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-r from-indigo-100/50 to-sky-100/50 rounded-full translate-x-1/3 translate-y-1/3 pointer-events-none"
-        variants={decorationVariants}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        style={{ willChange: "transform, opacity" }}
-      ></motion.div>
+      
 
       <motion.div
         className="absolute top-1/4 left-10 w-16 h-16 bg-gradient-to-r from-teal-100/40 to-indigo-100/40 rounded-full pointer-events-none"

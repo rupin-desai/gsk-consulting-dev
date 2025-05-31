@@ -163,7 +163,7 @@ const HomeAbout = () => {
 
               <div className="pt-6">
                 <Button
-                  to="/about"
+                  scrollToId="#homewhy"
                   color="gradient"
                   variant="primary"
                   className="flex items-center text-base"

@@ -13,6 +13,7 @@ const WhyUsCard = ({ icon, title, description, variants, iconColor }) => {
   return (
     <motion.div
       variants={variants}
+      
       className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center relative overflow-hidden group h-full transition-all duration-300 hover:shadow-xl"
     >
       {/* Curtain overlay - hidden initially, slides down on hover */}
@@ -159,7 +160,7 @@ const HomeWhyUs = () => {
   ];
 
   return (
-    <section className="py-16 px-12 sm:px-24 bg-gray-50" ref={ref}>
+    <section className="py-16 px-12 sm:px-24 bg-gray-50" id="homewhy" ref={ref}>
       <motion.div
         className="container mx-auto px-4"
         variants={containerVariants}

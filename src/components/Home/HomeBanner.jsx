@@ -30,6 +30,24 @@ const HomeBanner = () => {
   const isBgTopInView = useInView(bgTopRef, { once: true, amount: 0.1 });
   const isBgBottomInView = useInView(bgBottomRef, { once: true, amount: 0.1 });
 
+  // Function to scroll to the HomeContact section
+  const scrollToContact = (e) => {
+    e.preventDefault();
+    const contactSection = document.getElementById("home-contact-section");
+    if (contactSection) {
+      const navbarHeight = 80; // Estimated navbar height
+      const sectionPosition =
+        contactSection.getBoundingClientRect().top +
+        window.pageYOffset -
+        navbarHeight;
+
+      window.scrollTo({
+        top: sectionPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   // Function to scroll to the next section (HomeAbout)
   const scrollToNextSection = () => {
     const nextSection = document.getElementById("home-about-section");
@@ -255,7 +273,11 @@ const HomeBanner = () => {
                   willChange: "transform, opacity",
                 }}
               >
-                <Button to="#" color="gradient" className="flex items-center">
+                <Button
+                  color="gradient"
+                  className="flex items-center"
+                  onClick={scrollToContact}
+                >
                   Schedule a Consultation{" "}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -375,8 +397,6 @@ const HomeBanner = () => {
           </div>
         </div>
       </div>
-
-    
 
       <motion.div
         ref={bgBottomRef}
