@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import {
-  TruckIcon,
-  GlobeIcon,
+  TrophyIcon,
+  UsersIcon,
+  ScaleIcon,
+  BarChartIcon,
+  PieChartIcon,
   BriefcaseIcon,
-  Users2Icon,
-  Plane,
-  LaptopIcon,
 } from "lucide-react";
 
 const WhyUsCard = ({ icon, title, description, variants }) => {
@@ -16,11 +16,11 @@ const WhyUsCard = ({ icon, title, description, variants }) => {
       className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center relative overflow-hidden group h-full transition-all duration-300 hover:shadow-xl"
     >
       {/* Curtain overlay - hidden initially, slides down on hover */}
-      <div className="absolute inset-0 bg-[#00B5CA]/90 transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out z-0"></div>
+      <div className="absolute inset-0 bg-[#e6b400]/90 transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out z-0"></div>
 
       {/* Content container - stays above the curtain overlay */}
       <div className="relative z-10 flex flex-col items-center justify-center flex-1">
-        <div className="w-16 h-16 mb-4 flex items-center justify-center bg-[#00B5CA]/10 group-hover:bg-white/20 rounded-full text-[#00B5CA] group-hover:text-white transition-colors duration-300">
+        <div className="w-16 h-16 mb-4 flex items-center justify-center bg-[#e6b400]/10 group-hover:bg-white/20 rounded-full text-[#e6b400] group-hover:text-white transition-colors duration-300">
           {icon}
         </div>
 
@@ -29,7 +29,7 @@ const WhyUsCard = ({ icon, title, description, variants }) => {
         </h3>
 
         {/* Decorative line */}
-        <div className="w-12 h-1 bg-[#00B5CA] group-hover:bg-white transition-colors duration-300 mb-4"></div>
+        <div className="w-12 h-1 bg-[#e6b400] group-hover:bg-white transition-colors duration-300 mb-4"></div>
 
         <p className="text-gray-600 group-hover:text-white/90 transition-colors duration-300">
           {description}
@@ -54,7 +54,7 @@ const HomeWhyUs = () => {
     },
   };
 
-  // Title section variants - removed delay properties
+  // Title section variants
   const titleContainerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -82,7 +82,7 @@ const HomeWhyUs = () => {
     },
   };
 
-  // Cards grid variants - removed delay properties
+  // Cards grid variants
   const cardsContainerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -112,40 +112,40 @@ const HomeWhyUs = () => {
 
   const features = [
     {
-      icon: <TruckIcon size={32} />,
-      title: "Logistics Specialization",
+      icon: <TrophyIcon size={32} />,
+      title: "Experienced Professionals",
       description:
-        "Tailored courses focused on logistics and supply chain management, equipping students with the skills and knowledge demanded by the industry.",
+        "Our team brings decades of industry experience across various sectors, delivering expertise you can rely on for your most critical business challenges.",
+    },
+    {
+      icon: <UsersIcon size={32} />,
+      title: "Client-Focused Approach",
+      description:
+        "We listen first, then collaborate closely with you to develop solutions that align perfectly with your business goals and organizational culture.",
+    },
+    {
+      icon: <ScaleIcon size={32} />,
+      title: "Scalable Solutions",
+      description:
+        "Our services and solutions scale with your business, ensuring sustainable growth and adaptability to changing market conditions.",
+    },
+    {
+      icon: <BarChartIcon size={32} />,
+      title: "Proven Track Record",
+      description:
+        "We've successfully delivered hundreds of projects across industries, consistently exceeding client expectations with measurable results.",
+    },
+    {
+      icon: <PieChartIcon size={32} />,
+      title: "Data-Driven Strategy",
+      description:
+        "Our recommendations are backed by comprehensive analysis and industry insights, ensuring decisions are based on solid evidence rather than assumptions.",
     },
     {
       icon: <BriefcaseIcon size={32} />,
-      title: "Holistic Approach",
+      title: "End-to-End Solutions",
       description:
-        "We offer comprehensive overseas education support, from university applications to skill training, preparing students for the global workforce.",
-    },
-    {
-      icon: <GlobeIcon size={32} />,
-      title: "Global Perspectives",
-      description:
-        "We are committed to global education, partnering with international institutions for student exchanges, collaborative research, and diverse learning experiences.",
-    },
-    {
-      icon: <Users2Icon size={32} />,
-      title: "Comprehensive Guidance",
-      description:
-        "Personalized counseling on academics, careers, and international universities to help students make informed, goal-aligned decisions.",
-    },
-    {
-      icon: <Plane size={32} />,
-      title: "Visa Processing Assistance",
-      description:
-        "We offer visa application support alongside counseling, ensuring a smooth transition for students studying abroad.",
-    },
-    {
-      icon: <LaptopIcon size={32} />,
-      title: "Technology Integration",
-      description:
-        "Our startup leverages advanced technology to enhance learning with virtual classrooms, and interactive modules, reflecting our commitment to innovation.",
+        "From initial strategy to final implementation, we provide complete project oversight and management, ensuring seamless execution at every stage.",
     },
   ];
 
@@ -168,18 +168,18 @@ const HomeWhyUs = () => {
             className="text-3xl lg:text-4xl font-bold text-gray-800"
             variants={titleElementVariants}
           >
-            Why Choose Us
+            Why Choose GSK Consultants
           </motion.h2>
           <motion.div
-            className="w-20 h-1 bg-[#00B5CA] mx-auto mt-4 mb-6"
+            className="w-20 h-1 bg-[#e6b400] mx-auto mt-4 mb-6"
             variants={titleElementVariants}
           ></motion.div>
           <motion.p
             className="text-gray-600 max-w-3xl mx-auto"
             variants={titleElementVariants}
           >
-            At IILOS, we provide unparalleled education and support in logistics
-            and international education. Here's what sets us apart.
+            At GSK Consultants, we provide unparalleled consulting and project
+            management services. Here's what sets us apart.
           </motion.p>
         </motion.div>
 

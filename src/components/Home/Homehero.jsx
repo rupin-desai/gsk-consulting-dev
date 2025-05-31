@@ -82,7 +82,7 @@ const HomeHero = () => {
     <section
       className="relative h-[80vh] bg-cover bg-center flex items-center"
       style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')`,
+        backgroundImage: `url('https://images.unsplash.com/photo-1573167243872-43c6433b9d40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')`,
       }}
     >
       {/* Overlay */}
@@ -100,27 +100,27 @@ const HomeHero = () => {
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
             variants={headingVariants}
           >
-            International Education
+            Welcome to GSK Consultants
           </motion.h1>
 
           <motion.h1
             className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4"
             variants={subheadingVariants}
           >
-            <span className="text-[#00B5CA]">Global Career</span>
+            <span className="text-[#e6b400]">Your Trusted Partner</span>
           </motion.h1>
 
           <motion.p
             className="text-xl text-gray-200 mb-8 mx-auto"
             variants={paragraphVariants}
           >
-            With expert-led learning, Become the force behind Smarter supply
-            chains & Logistics Management.
+            Expert consulting and project management to turn your ideas into
+            impactful results.
           </motion.p>
 
           <motion.div className="flex justify-center" variants={buttonVariants}>
-            <Button to="/contact" color="blue" variant="primary">
-              Enroll Now
+            <Button to="/contact" color="yellow" variant="primary">
+              Get Started
             </Button>
           </motion.div>
         </motion.div>

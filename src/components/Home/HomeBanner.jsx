@@ -98,37 +98,36 @@ const HomeBanner = () => {
       animate="visible"
     >
       <div className="w-full lg:w-3/4 mx-auto overflow-hidden rounded-lg shadow-xl flex flex-col md:flex-row">
-        {/* Image Column - Updated with a truck shipment image */}
+        {/* Image Column */}
         <motion.div
           className="w-full md:w-1/2 h-48 md:h-64"
           variants={imageVariants}
         >
           <img
-            src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80"
-            alt="Logistics Truck Transportation"
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80"
+            alt="Business Consulting Team"
             className="w-full h-full object-cover"
           />
         </motion.div>
 
-        {/* Content Column - Updated content */}
+        {/* Content Column */}
         <motion.div
-          className="w-full md:w-1/2 bg-[#00B5CA] p-5 lg:p-8 flex flex-col justify-center"
+          className="w-full md:w-1/2 bg-[#e6b400] p-5 lg:p-8 flex flex-col justify-center"
           variants={contentVariants}
         >
           <motion.h2
             className="text-white text-xl lg:text-2xl font-bold mb-2"
             variants={itemVariants}
           >
-            Redefining Logistics Education
+            Let's Build Something Great Together
           </motion.h2>
 
           <motion.p
             className="text-white text-base mb-4"
             variants={itemVariants}
           >
-            IILOS combines industry expertise, global perspectives, and
-            innovative technology to deliver specialized training in supply
-            chain management and logistics.
+            Ready to start your next project or need expert consulting advice?
+            Contact GSK Consultants today and move forward with confidence.
           </motion.p>
 
           <motion.div variants={itemVariants}>
@@ -138,7 +137,7 @@ const HomeBanner = () => {
               onClick={scrollToNextSection}
               className="text-sm"
             >
-              Discover More
+              Learn More
             </Button>
           </motion.div>
         </motion.div>

@@ -6,7 +6,7 @@ const HomeInfo = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
-  // Animation variants - removed all delays
+  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -49,7 +49,6 @@ const HomeInfo = () => {
     },
   };
 
-  // Title animation - removed delay and when property
   const titleVariants = {
     hidden: {
       opacity: 0,
@@ -67,7 +66,6 @@ const HomeInfo = () => {
     },
   };
 
-  // Content after title - removed delay and when property
   const contentVariants = {
     hidden: {
       opacity: 0,
@@ -105,14 +103,14 @@ const HomeInfo = () => {
     <section className="py-20 relative overflow-hidden" ref={ref}>
       {/* Decorative elements */}
       <motion.div
-        className="absolute bottom-0 right-0 w-64 h-64 bg-[#00B5CA]/5 rounded-full translate-x-1/3 translate-y-1/3"
+        className="absolute bottom-0 right-0 w-64 h-64 bg-[#e6b400]/5 rounded-full translate-x-1/3 translate-y-1/3"
         variants={decorationVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       ></motion.div>
 
       <motion.div
-        className="absolute top-1/2 left-3/4 w-10 h-10 bg-[#00B5CA]/10 rounded-full"
+        className="absolute top-1/2 left-3/4 w-10 h-10 bg-[#e6b400]/10 rounded-full"
         variants={decorationVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
@@ -125,8 +123,8 @@ const HomeInfo = () => {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        <div className="w-full h-px bg-[#00B5CA]/20 rotate-45 absolute top-5"></div>
-        <div className="w-full h-px bg-[#00B5CA]/20 -rotate-45 absolute top-5"></div>
+        <div className="w-full h-px bg-[#e6b400]/20 rotate-45 absolute top-5"></div>
+        <div className="w-full h-px bg-[#e6b400]/20 -rotate-45 absolute top-5"></div>
       </motion.div>
 
       <div className="mx-auto px-8 sm:px-12 relative z-10">
@@ -138,7 +136,7 @@ const HomeInfo = () => {
         >
           {/* Decorative quote marks */}
           <motion.span
-            className="text-8xl text-[#00B5CA]/10 font-serif absolute -top-10 left-0 md:left-10"
+            className="text-8xl text-[#e6b400]/10 font-serif absolute -top-10 left-0 md:left-10"
             variants={quoteMarkVariants}
           >
             "
@@ -154,15 +152,15 @@ const HomeInfo = () => {
                 className="inline-block relative pb-3"
                 variants={itemVariants}
               >
-                #Redefining
-                <div className="absolute -bottom-1 left-0 right-0 h-1 bg-[#00B5CA]"></div>
+                #Delivering
+                <div className="absolute -bottom-1 left-0 right-0 h-1 bg-[#e6b400]"></div>
               </motion.span>
               <motion.span className="inline-block" variants={itemVariants}>
-                Employability Education
+                Excellence in Consulting
               </motion.span>
             </div>
             <motion.span className="block mt-3 md:mt-2" variants={itemVariants}>
-              with a Focus on Logistics
+              and Project Management
             </motion.span>
           </motion.h2>
 
@@ -171,27 +169,24 @@ const HomeInfo = () => {
             className="text-gray-600 mb-8 text-lg leading-relaxed"
             variants={contentVariants}
           >
-            We aim to redefine overseas education by integrating
-            logistics-focused industry knowledge, skill development, and a
-            global perspective. Our mission is to shape future global leaders
-            who will confidently navigate the complexities of the world.
-            Standing at the intersection of education and industry, our startup
-            is committed to unlocking boundless opportunities for aspiring
-            individuals.
+            Whether you're launching a new initiative, improving existing
+            processes, or managing complex projects, our team is here to guide
+            you with strategic insight, hands-on execution, and measurable
+            outcomes.
           </motion.p>
 
           <motion.div
             className="flex justify-center"
             variants={contentVariants}
           >
-            <Button to="/about" color="blue" className="px-8 py-3">
-              Learn More About Our Vision
+            <Button to="/services" color="yellow" className="px-8 py-3">
+              Explore Our Services
             </Button>
           </motion.div>
 
           {/* Decorative quote marks */}
           <motion.span
-            className="text-8xl text-[#00B5CA]/10 font-serif absolute -bottom-20 right-0 md:right-10"
+            className="text-8xl text-[#e6b400]/10 font-serif absolute -bottom-20 right-0 md:right-10"
             variants={quoteMarkVariants}
           >
             "
