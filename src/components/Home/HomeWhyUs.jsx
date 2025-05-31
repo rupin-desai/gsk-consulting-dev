@@ -13,7 +13,6 @@ const WhyUsCard = ({ icon, title, description, variants, iconColor }) => {
   return (
     <motion.div
       variants={variants}
-      
       className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center relative overflow-hidden group h-full transition-all duration-300 hover:shadow-xl"
     >
       {/* Curtain overlay - hidden initially, slides down on hover */}
@@ -21,10 +20,28 @@ const WhyUsCard = ({ icon, title, description, variants, iconColor }) => {
 
       {/* Content container - stays above the curtain overlay */}
       <div className="relative z-10 flex flex-col items-center justify-center flex-1">
+        {/* Icon container with consistent gradient that stays on hover */}
         <div
-          className={`w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-r from-${iconColor}-100 to-sky-100 group-hover:bg-white/20 rounded-full text-${iconColor}-600 transition-colors duration-300`}
+          className={`w-16 h-16 mb-4 flex items-center justify-center rounded-full transition-all duration-300 bg-gradient-to-r ${
+            iconColor === "indigo"
+              ? "from-indigo-100 to-indigo-200"
+              : iconColor === "teal"
+              ? "from-teal-100 to-teal-200"
+              : "from-sky-100 to-sky-200"
+          } group-hover:${
+            iconColor === "indigo"
+              ? "from-indigo-200 to-indigo-300"
+              : iconColor === "teal"
+              ? "from-teal-200 to-teal-300"
+              : "from-sky-200 to-sky-300"
+          }`}
         >
-          {icon}
+          {/* Icon that keeps its color on hover */}
+          <span
+            className={`text-${iconColor}-600 group-hover:text-${iconColor}-700`}
+          >
+            {icon}
+          </span>
         </div>
 
         <h3 className="text-xl font-semibold mb-2 text-gray-800 group-hover:text-white transition-colors duration-300">
