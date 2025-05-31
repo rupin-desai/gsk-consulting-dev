@@ -18,6 +18,7 @@ import MobileMenu from "./MobileMenu";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [hoveredItem, setHoveredItem] = useState(null);
   const location = useLocation();
   const bannerControls = useAnimation();
   const currentYear = new Date().getFullYear();
@@ -99,6 +100,24 @@ const Navbar = () => {
       },
     });
   }, [bannerControls]);
+
+  // Styles for nav link underline
+  const navLinkStyle = {
+    position: "relative",
+    paddingBottom: "2px",
+  };
+
+  const navLinkAfterStyle = {
+    position: "absolute",
+    width: "100%",
+    height: "2px",
+    bottom: "-2px",
+    left: 0,
+    backgroundImage: "linear-gradient(to right, #4f46e5, #0284c7, #0d9488)",
+    transform: "scaleX(0)",
+    transformOrigin: "left",
+    transition: "transform 0.3s ease-out",
+  };
 
   return (
     <>
@@ -205,39 +224,102 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex uppercase space-x-8">
-            <NavLink
-              to="/"
-              end
-              className={({ isActive }) =>
-                isActive
-                  ? "font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 relative nav-link nav-link-active"
-                  : "font-medium text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 relative nav-link transition-colors"
-              }
+            {/* Home Link with span wrapper */}
+            <span
+              className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
+              style={navLinkStyle}
+              onMouseEnter={() => setHoveredItem("home")}
+              onMouseLeave={() => setHoveredItem(null)}
             >
-              Home
-            </NavLink>
+              <NavLink
+                to="/"
+                end
+                className={({ isActive }) =>
+                  isActive
+                    ? "font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600"
+                    : "font-medium uppercase"
+                }
+              >
+                Home
+              </NavLink>
+              <span
+                style={{
+                  ...navLinkAfterStyle,
+                  transform:
+                    location.pathname === "/" || hoveredItem === "home"
+                      ? "scaleX(1)"
+                      : "scaleX(0)",
+                }}
+              ></span>
+            </span>
 
-            <NavLink
-              to="#"
-              className="font-medium uppercase text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 relative nav-link transition-colors"
+            {/* About Link with span wrapper */}
+            <span
+              className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
+              style={navLinkStyle}
+              onMouseEnter={() => setHoveredItem("about")}
+              onMouseLeave={() => setHoveredItem(null)}
             >
-              About
-            </NavLink>
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive
+                    ? "font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600"
+                    : "font-medium uppercase"
+                }
+              >
+                About
+              </NavLink>
+              <span
+                style={{
+                  ...navLinkAfterStyle,
+                  transform:
+                    location.pathname === "/about" || hoveredItem === "about"
+                      ? "scaleX(1)"
+                      : "scaleX(0)",
+                }}
+              ></span>
+            </span>
 
             {/* Services Dropdown */}
             <div className="relative">
               {/* Button trigger only - reduced hitbox */}
               <div
                 className="flex items-center space-x-1 cursor-pointer"
-                onMouseEnter={() => showDropdown("services")}
-                onMouseLeave={hideDropdown}
+                onMouseEnter={() => {
+                  showDropdown("services");
+                  setHoveredItem("services");
+                }}
+                onMouseLeave={() => {
+                  hideDropdown();
+                  setHoveredItem(null);
+                }}
               >
-                <NavLink
-                  to="#"
-                  className="font-medium text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 relative nav-link transition-colors"
+                <span
+                  className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
+                  style={navLinkStyle}
                 >
-                  Services
-                </NavLink>
+                  <NavLink
+                    to="/services"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600"
+                        : "font-medium uppercase"
+                    }
+                  >
+                    Services
+                  </NavLink>
+                  <span
+                    style={{
+                      ...navLinkAfterStyle,
+                      transform:
+                        location.pathname.startsWith("/services") ||
+                        hoveredItem === "services"
+                          ? "scaleX(1)"
+                          : "scaleX(0)",
+                    }}
+                  ></span>
+                </span>
                 <ChevronDown
                   size={16}
                   className="text-gray-600 hover:text-sky-600 transition-colors"
@@ -247,8 +329,14 @@ const Navbar = () => {
               {/* Dropdown Menu */}
               <div
                 className="absolute left-0 top-full pt-2"
-                onMouseEnter={() => showDropdown("services")}
-                onMouseLeave={hideDropdown}
+                onMouseEnter={() => {
+                  showDropdown("services");
+                  setHoveredItem("services");
+                }}
+                onMouseLeave={() => {
+                  hideDropdown();
+                  setHoveredItem(null);
+                }}
               >
                 <div
                   className={`bg-white shadow-lg rounded-md py-2 w-72 transform transition-all duration-200 ${
@@ -257,24 +345,27 @@ const Navbar = () => {
                       : "opacity-0 -translate-y-2 pointer-events-none"
                   }`}
                 >
-                  <Link
-                    to="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
-                  >
-                    Business & Management Consulting
-                  </Link>
-                  <Link
-                    to="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
-                  >
-                    Project Management Services
-                  </Link>
-                  <Link
-                    to="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
-                  >
-                    Strategic Planning & Execution
-                  </Link>
+                  <div className="block px-4 py-2 text-sm hover:bg-gray-100">
+                    <span className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
+                      <Link to="/services/business-consulting">
+                        Business & Management Consulting
+                      </Link>
+                    </span>
+                  </div>
+                  <div className="block px-4 py-2 text-sm hover:bg-gray-100">
+                    <span className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
+                      <Link to="/services/project-management">
+                        Project Management Services
+                      </Link>
+                    </span>
+                  </div>
+                  <div className="block px-4 py-2 text-sm hover:bg-gray-100">
+                    <span className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
+                      <Link to="/services/strategic-planning">
+                        Strategic Planning & Execution
+                      </Link>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -284,15 +375,40 @@ const Navbar = () => {
               {/* Button trigger only - reduced hitbox */}
               <div
                 className="flex items-center space-x-1 cursor-pointer"
-                onMouseEnter={() => showDropdown("industries")}
-                onMouseLeave={hideDropdown}
+                onMouseEnter={() => {
+                  showDropdown("industries");
+                  setHoveredItem("industries");
+                }}
+                onMouseLeave={() => {
+                  hideDropdown();
+                  setHoveredItem(null);
+                }}
               >
-                <NavLink
-                  to="#"
-                  className="font-medium text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 relative nav-link transition-colors"
+                <span
+                  className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
+                  style={navLinkStyle}
                 >
-                  Industries
-                </NavLink>
+                  <NavLink
+                    to="/industries"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600"
+                        : "font-medium uppercase"
+                    }
+                  >
+                    Industries
+                  </NavLink>
+                  <span
+                    style={{
+                      ...navLinkAfterStyle,
+                      transform:
+                        location.pathname.startsWith("/industries") ||
+                        hoveredItem === "industries"
+                          ? "scaleX(1)"
+                          : "scaleX(0)",
+                    }}
+                  ></span>
+                </span>
                 <ChevronDown
                   size={16}
                   className="text-gray-600 hover:text-sky-600 transition-colors"
@@ -302,8 +418,14 @@ const Navbar = () => {
               {/* Dropdown Menu */}
               <div
                 className="absolute left-0 top-full pt-2"
-                onMouseEnter={() => showDropdown("industries")}
-                onMouseLeave={hideDropdown}
+                onMouseEnter={() => {
+                  showDropdown("industries");
+                  setHoveredItem("industries");
+                }}
+                onMouseLeave={() => {
+                  hideDropdown();
+                  setHoveredItem(null);
+                }}
               >
                 <div
                   className={`bg-white shadow-lg rounded-md py-2 w-64 transform transition-all duration-200 ${
@@ -312,39 +434,58 @@ const Navbar = () => {
                       : "opacity-0 -translate-y-2 pointer-events-none"
                   }`}
                 >
-                  <Link
-                    to="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
-                  >
-                    Manufacturing
-                  </Link>
-                  <Link
-                    to="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
-                  >
-                    Technology
-                  </Link>
-                  <Link
-                    to="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
-                  >
-                    Healthcare
-                  </Link>
+                  <div className="block px-4 py-2 text-sm hover:bg-gray-100">
+                    <span className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
+                      <Link to="/industries/manufacturing">Manufacturing</Link>
+                    </span>
+                  </div>
+                  <div className="block px-4 py-2 text-sm hover:bg-gray-100">
+                    <span className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
+                      <Link to="/industries/technology">Technology</Link>
+                    </span>
+                  </div>
+                  <div className="block px-4 py-2 text-sm hover:bg-gray-100">
+                    <span className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
+                      <Link to="/industries/healthcare">Healthcare</Link>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <NavLink
-              to="#"
-              className="font-medium text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 relative nav-link transition-colors"
+            {/* Contact Link with span wrapper */}
+            <span
+              className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
+              style={navLinkStyle}
+              onMouseEnter={() => setHoveredItem("contact")}
+              onMouseLeave={() => setHoveredItem(null)}
             >
-              Contact
-            </NavLink>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive
+                    ? "font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600"
+                    : "font-medium uppercase"
+                }
+              >
+                Contact
+              </NavLink>
+              <span
+                style={{
+                  ...navLinkAfterStyle,
+                  transform:
+                    location.pathname === "/contact" ||
+                    hoveredItem === "contact"
+                      ? "scaleX(1)"
+                      : "scaleX(0)",
+                }}
+              ></span>
+            </span>
           </div>
 
           {/* Contact Button (Desktop) */}
           <div className="hidden md:block">
-            <Button to="#" color="gradient">
+            <Button to="/contact" color="gradient">
               GET STARTED
             </Button>
           </div>
@@ -377,41 +518,6 @@ const Navbar = () => {
           />
         )}
       </AnimatePresence>
-
-      {/* CSS for the underline animation */}
-      <style jsx>{`
-        .nav-link {
-          position: relative;
-          padding-bottom: 2px;
-        }
-
-        .nav-link::after {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 2px;
-          bottom: -2px;
-          left: 0;
-          background-image: linear-gradient(
-            to right,
-            #4f46e5,
-            #0284c7,
-            #0d9488
-          );
-          transform: scaleX(0);
-          transform-origin: left;
-          transition: transform 0.3s ease-out;
-        }
-
-        .nav-link:hover::after,
-        .nav-link-active::after {
-          transform: scaleX(1);
-        }
-
-        .nav-link-active::after {
-          transform: scaleX(1);
-        }
-      `}</style>
     </>
   );
 };

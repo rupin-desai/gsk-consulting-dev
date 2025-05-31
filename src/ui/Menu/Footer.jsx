@@ -27,17 +27,25 @@ const Footer = () => {
               Our Services
             </h3>
             <ul className="space-y-2">
-              <li className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 transition-colors">
-                <Link to="#">Business & Management Consulting</Link>
+              <li>
+                <span className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
+                  <Link to="#">Business & Management Consulting</Link>
+                </span>
               </li>
-              <li className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 transition-colors">
-                <Link to="#">Project Management Services</Link>
+              <li>
+                <span className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
+                  <Link to="#">Project Management Services</Link>
+                </span>
               </li>
-              <li className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 transition-colors">
-                <Link to="#">Customized Solutions</Link>
+              <li>
+                <span className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
+                  <Link to="#">Customized Solutions</Link>
+                </span>
               </li>
-              <li className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 transition-colors">
-                <Link to="#">Strategic Planning</Link>
+              <li>
+                <span className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
+                  <Link to="#">Strategic Planning</Link>
+                </span>
               </li>
             </ul>
           </div>
@@ -49,13 +57,16 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               <li className="flex items-center">
-                <Phone size={20} className="mr-2 text-indigo-600" />
+                <Phone
+                  size={20}
+                  className="mr-2 text-indigo-600 flex-shrink-0"
+                />
                 <span className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
                   <a href="tel:+9193226 06890">(+91) 93226 06890</a>
                 </span>
               </li>
               <li className="flex items-center">
-                <Mail size={20} className="mr-2 text-sky-600" />
+                <Mail size={20} className="mr-2 text-sky-600 flex-shrink-0" />
                 <span className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
                   <a href="mailto:info@gskconsulting.com">
                     info@gskconsulting.com
