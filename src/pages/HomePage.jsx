@@ -13,10 +13,11 @@ const HomePage = () => {
       <Homehero />
       {/* <HomeBanner /> */}
       <HomeStats />
+      <HomeBanner />
+      <HomeColabs />
       <HomeAbout />
       <HomeWhyUs />
       <HomeInfo />
-      <HomeColabs />
     </>
   );
 };

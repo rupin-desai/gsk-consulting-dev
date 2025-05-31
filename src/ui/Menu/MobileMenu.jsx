@@ -75,7 +75,7 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
         <button
           onClick={() => setIsOpen(false)}
           aria-label="Close menu"
-          className="text-gray-700 hover:text-[#e6b400] p-2"
+          className="text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 p-2"
         >
           <X size={24} />
         </button>
@@ -84,7 +84,7 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
       <div className="flex-1 overflow-y-auto p-5 space-y-6">
         <Link
           to="/"
-          className="block py-2 text-gray-700 hover:text-[#e6b400] font-medium transition-colors"
+          className="block py-2 text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 font-medium transition-colors"
           onClick={() => setIsOpen(false)}
         >
           Home
@@ -92,7 +92,7 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
 
         <Link
           to="#"
-          className="block py-2 text-gray-700 hover:text-[#e6b400] font-medium transition-colors"
+          className="block py-2 text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 font-medium transition-colors"
           onClick={() => setIsOpen(false)}
         >
           About
@@ -104,18 +104,18 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
             className="flex justify-between items-center cursor-pointer group"
             onClick={() => toggleSubmenu("services")}
           >
-            <span className="text-gray-700 group-hover:text-[#e6b400] font-medium transition-colors">
+            <span className="text-gray-700 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-indigo-600 group-hover:via-sky-600 group-hover:to-teal-600 font-medium transition-colors">
               Services
             </span>
             {expandedMenus.services ? (
               <ChevronUp
                 size={20}
-                className="text-gray-500 group-hover:text-[#e6b400] transition-colors"
+                className="text-gray-500 group-hover:text-sky-600 transition-colors"
               />
             ) : (
               <ChevronDown
                 size={20}
-                className="text-gray-500 group-hover:text-[#e6b400] transition-colors"
+                className="text-gray-500 group-hover:text-sky-600 transition-colors"
               />
             )}
           </div>
@@ -129,21 +129,21 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
             >
               <Link
                 to="#"
-                className="block py-2 text-gray-600 hover:text-[#e6b400] transition-colors"
+                className="block py-2 text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Business & Management Consulting
               </Link>
               <Link
                 to="#"
-                className="block py-2 text-gray-600 hover:text-[#e6b400] transition-colors"
+                className="block py-2 text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Project Management Services
               </Link>
               <Link
                 to="#"
-                className="block py-2 text-gray-600 hover:text-[#e6b400] transition-colors"
+                className="block py-2 text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Strategic Planning & Execution
@@ -158,18 +158,18 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
             className="flex justify-between items-center cursor-pointer group"
             onClick={() => toggleSubmenu("industries")}
           >
-            <span className="text-gray-700 group-hover:text-[#e6b400] font-medium transition-colors">
+            <span className="text-gray-700 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-indigo-600 group-hover:via-sky-600 group-hover:to-teal-600 font-medium transition-colors">
               Industries
             </span>
             {expandedMenus.industries ? (
               <ChevronUp
                 size={20}
-                className="text-gray-500 group-hover:text-[#e6b400] transition-colors"
+                className="text-gray-500 group-hover:text-sky-600 transition-colors"
               />
             ) : (
               <ChevronDown
                 size={20}
-                className="text-gray-500 group-hover:text-[#e6b400] transition-colors"
+                className="text-gray-500 group-hover:text-sky-600 transition-colors"
               />
             )}
           </div>
@@ -183,21 +183,21 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
             >
               <Link
                 to="#"
-                className="block py-2 text-gray-600 hover:text-[#e6b400] transition-colors"
+                className="block py-2 text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Manufacturing
               </Link>
               <Link
                 to="#"
-                className="block py-2 text-gray-600 hover:text-[#e6b400] transition-colors"
+                className="block py-2 text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Technology
               </Link>
               <Link
                 to="#"
-                className="block py-2 text-gray-600 hover:text-[#e6b400] transition-colors"
+                className="block py-2 text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Healthcare
@@ -208,7 +208,7 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
 
         <Link
           to="#"
-          className="block py-2 text-gray-700 hover:text-[#e6b400] font-medium transition-colors"
+          className="block py-2 text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 font-medium transition-colors"
           onClick={() => setIsOpen(false)}
         >
           Contact
@@ -216,7 +216,7 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
 
         <Link
           to="#"
-          className="block bg-[#e6b400] text-white px-6 py-3 rounded-md hover:bg-opacity-90 transition-colors text-center mt-6"
+          className="block bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 hover:from-indigo-700 hover:via-sky-700 hover:to-teal-700 text-white px-6 py-3 rounded-md transition-colors text-center mt-6"
           onClick={() => setIsOpen(false)}
         >
           Get Started

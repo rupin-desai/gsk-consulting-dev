@@ -19,9 +19,17 @@ const Button = ({
       primary: "bg-[#00B5CA] hover:bg-[#00a3b6] text-white",
       outline: "border border-[#00B5CA] text-[#00B5CA] hover:bg-[#00B5CA]/10",
     },
+    gradient: {
+      primary:
+        "bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 hover:from-indigo-700 hover:via-sky-700 hover:to-teal-700 text-white",
+      outline:
+        "border border-transparent bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600/10",
+    },
     yellow: {
-      primary: "bg-[#e6b400] hover:bg-[#c99c00] text-white",
-      outline: "border border-[#e6b400] text-[#e6b400] hover:bg-[#e6b400]/10",
+      primary:
+        "bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 hover:from-indigo-700 hover:via-sky-700 hover:to-teal-700 text-white",
+      outline:
+        "border border-transparent bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600/10",
     },
     white: {
       primary: "bg-white hover:bg-gray-100 text-gray-900",
@@ -87,7 +95,7 @@ const Button = ({
   }
 
   // If it has an internal link
-  if (to.startsWith("/")) {
+  if (to.startsWith("/") || to === "#") {
     return (
       <motion.div
         whileTap="tap"

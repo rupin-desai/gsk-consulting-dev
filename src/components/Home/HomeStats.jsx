@@ -78,6 +78,14 @@ const HomeStats = () => {
     },
   };
 
+  // Define icon colors for a professional look
+  const iconColors = [
+    "text-indigo-600",
+    "text-sky-600",
+    "text-teal-600",
+    "text-violet-600",
+  ];
+
   // Stats data
   const stats = [
     {
@@ -109,7 +117,7 @@ const HomeStats = () => {
   return (
     <section
       ref={ref}
-      className="py-10 md:py-16 bg-gray-50"
+      className="pt-16 bg-gray-50"
       style={{
         transform: "translate3d(0, 0, 0)",
         backfaceVisibility: "hidden",
@@ -149,7 +157,7 @@ const HomeStats = () => {
                 <div className="flex flex-col md:flex-row items-center">
                   {/* Icon with circular background */}
                   <motion.div
-                    className="w-14 h-14 mb-3 md:mb-0 md:mr-4 bg-[#e6b400]/10 rounded-full flex items-center justify-center text-[#e6b400]"
+                    className={`w-14 h-14 mb-3 md:mb-0 md:mr-4 bg-gradient-to-r from-indigo-100 to-sky-100 rounded-full flex items-center justify-center ${iconColors[index]}`}
                     variants={iconVariants}
                     initial="initial"
                     animate={isInView ? "animate" : "initial"}
@@ -186,7 +194,9 @@ const HomeStats = () => {
                       ) : (
                         <span>0</span>
                       )}
-                      <span className="text-[#e6b400]">{stat.suffix}</span>
+                      <span className="bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 bg-clip-text text-transparent">
+                        {stat.suffix}
+                      </span>
                     </motion.div>
 
                     {/* Stat label - hidden on smaller screens to save space */}
@@ -200,7 +210,7 @@ const HomeStats = () => {
               {/* Vertical separator line (except after the last item) */}
               {index < stats.length - 1 && (
                 <motion.div
-                  className="hidden md:block h-16 w-px bg-gray-200 mx-4"
+                  className="hidden md:block h-16 w-px bg-gradient-to-b from-indigo-200 via-sky-200 to-teal-200 mx-4"
                   variants={separatorVariants}
                   initial="initial"
                   animate={isInView ? "animate" : "initial"}

@@ -16,11 +16,11 @@ const WhyUsCard = ({ icon, title, description, variants }) => {
       className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center relative overflow-hidden group h-full transition-all duration-300 hover:shadow-xl"
     >
       {/* Curtain overlay - hidden initially, slides down on hover */}
-      <div className="absolute inset-0 bg-[#e6b400]/90 transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/90 via-sky-600/90 to-teal-600/90 transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out z-0"></div>
 
       {/* Content container - stays above the curtain overlay */}
       <div className="relative z-10 flex flex-col items-center justify-center flex-1">
-        <div className="w-16 h-16 mb-4 flex items-center justify-center bg-[#e6b400]/10 group-hover:bg-white/20 rounded-full text-[#e6b400] group-hover:text-white transition-colors duration-300">
+        <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-r from-indigo-100 to-sky-100 group-hover:bg-white/20 rounded-full text-indigo-600 group-hover:text-white transition-colors duration-300">
           {icon}
         </div>
 
@@ -29,7 +29,7 @@ const WhyUsCard = ({ icon, title, description, variants }) => {
         </h3>
 
         {/* Decorative line */}
-        <div className="w-12 h-1 bg-[#e6b400] group-hover:bg-white transition-colors duration-300 mb-4"></div>
+        <div className="w-12 h-1 bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 group-hover:bg-white transition-colors duration-300 mb-4"></div>
 
         <p className="text-gray-600 group-hover:text-white/90 transition-colors duration-300">
           {description}
@@ -171,7 +171,7 @@ const HomeWhyUs = () => {
             Why Choose GSK Consultants
           </motion.h2>
           <motion.div
-            className="w-20 h-1 bg-[#e6b400] mx-auto mt-4 mb-6"
+            className="w-20 h-1 bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 mx-auto mt-4 mb-6"
             variants={titleElementVariants}
           ></motion.div>
           <motion.p

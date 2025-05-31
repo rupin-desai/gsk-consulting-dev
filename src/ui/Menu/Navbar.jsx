@@ -102,8 +102,8 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Announcement Banner - Updated with GSK Consulting content */}
-      <div className="bg-[#e6b400] text-white overflow-hidden py-1">
+      {/* Announcement Banner - Updated with gradient */}
+      <div className="bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 text-white overflow-hidden py-1">
         <div className="flex whitespace-nowrap">
           <motion.div
             className="flex items-center space-x-8 mx-4 text-sm font-medium"
@@ -210,8 +210,8 @@ const Navbar = () => {
               end
               className={({ isActive }) =>
                 isActive
-                  ? "font-medium uppercase text-[#e6b400] relative nav-link nav-link-active"
-                  : "font-medium text-gray-700 hover:text-[#e6b400] relative nav-link transition-colors"
+                  ? "font-medium uppercase text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 relative nav-link nav-link-active"
+                  : "font-medium text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 relative nav-link transition-colors"
               }
             >
               Home
@@ -219,12 +219,12 @@ const Navbar = () => {
 
             <NavLink
               to="#"
-              className="font-medium uppercase text-gray-700 hover:text-[#e6b400] relative nav-link transition-colors"
+              className="font-medium uppercase text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 relative nav-link transition-colors"
             >
               About
             </NavLink>
 
-            {/* Services Dropdown - Updated from Higher Education */}
+            {/* Services Dropdown */}
             <div className="relative">
               {/* Button trigger only - reduced hitbox */}
               <div
@@ -234,13 +234,13 @@ const Navbar = () => {
               >
                 <NavLink
                   to="#"
-                  className="font-medium text-gray-700 hover:text-[#e6b400] relative nav-link transition-colors"
+                  className="font-medium text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 relative nav-link transition-colors"
                 >
                   Services
                 </NavLink>
                 <ChevronDown
                   size={16}
-                  className="text-gray-600 hover:text-[#e6b400] transition-colors"
+                  className="text-gray-600 hover:text-sky-600 transition-colors"
                 />
               </div>
 
@@ -259,19 +259,19 @@ const Navbar = () => {
                 >
                   <Link
                     to="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#e6b400]"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
                   >
                     Business & Management Consulting
                   </Link>
                   <Link
                     to="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#e6b400]"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
                   >
                     Project Management Services
                   </Link>
                   <Link
                     to="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#e6b400]"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
                   >
                     Strategic Planning & Execution
                   </Link>
@@ -279,7 +279,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* Industries Dropdown - Updated from International Education */}
+            {/* Industries Dropdown */}
             <div className="relative">
               {/* Button trigger only - reduced hitbox */}
               <div
@@ -289,13 +289,13 @@ const Navbar = () => {
               >
                 <NavLink
                   to="#"
-                  className="font-medium text-gray-700 hover:text-[#e6b400] relative nav-link transition-colors"
+                  className="font-medium text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 relative nav-link transition-colors"
                 >
                   Industries
                 </NavLink>
                 <ChevronDown
                   size={16}
-                  className="text-gray-600 hover:text-[#e6b400] transition-colors"
+                  className="text-gray-600 hover:text-sky-600 transition-colors"
                 />
               </div>
 
@@ -314,19 +314,19 @@ const Navbar = () => {
                 >
                   <Link
                     to="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#e6b400]"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
                   >
                     Manufacturing
                   </Link>
                   <Link
                     to="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#e6b400]"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
                   >
                     Technology
                   </Link>
                   <Link
                     to="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#e6b400]"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
                   >
                     Healthcare
                   </Link>
@@ -336,7 +336,7 @@ const Navbar = () => {
 
             <NavLink
               to="#"
-              className="font-medium text-gray-700 hover:text-[#e6b400] relative nav-link transition-colors"
+              className="font-medium text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 relative nav-link transition-colors"
             >
               Contact
             </NavLink>
@@ -344,7 +344,7 @@ const Navbar = () => {
 
           {/* Contact Button (Desktop) */}
           <div className="hidden md:block">
-            <Button to="#" color="yellow">
+            <Button to="#" color="gradient">
               GET STARTED
             </Button>
           </div>
@@ -353,7 +353,7 @@ const Navbar = () => {
           <motion.button
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsMenuOpen(true)}
-            className="md:hidden text-gray-700 hover:text-[#e6b400]"
+            className="md:hidden text-gray-700 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600"
             aria-label="Open menu"
           >
             <Menu size={28} />
@@ -392,7 +392,12 @@ const Navbar = () => {
           height: 2px;
           bottom: -2px;
           left: 0;
-          background-color: #e6b400;
+          background-image: linear-gradient(
+            to right,
+            #4f46e5,
+            #0284c7,
+            #0d9488
+          );
           transform: scaleX(0);
           transform-origin: left;
           transition: transform 0.3s ease-out;

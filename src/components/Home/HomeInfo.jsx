@@ -103,14 +103,14 @@ const HomeInfo = () => {
     <section className="py-20 relative overflow-hidden" ref={ref}>
       {/* Decorative elements */}
       <motion.div
-        className="absolute bottom-0 right-0 w-64 h-64 bg-[#e6b400]/5 rounded-full translate-x-1/3 translate-y-1/3"
+        className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-r from-indigo-100/50 to-sky-100/50 rounded-full translate-x-1/3 translate-y-1/3"
         variants={decorationVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       ></motion.div>
 
       <motion.div
-        className="absolute top-1/2 left-3/4 w-10 h-10 bg-[#e6b400]/10 rounded-full"
+        className="absolute top-1/2 left-3/4 w-10 h-10 bg-gradient-to-r from-indigo-100/50 to-sky-100/50 rounded-full"
         variants={decorationVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
@@ -123,8 +123,8 @@ const HomeInfo = () => {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        <div className="w-full h-px bg-[#e6b400]/20 rotate-45 absolute top-5"></div>
-        <div className="w-full h-px bg-[#e6b400]/20 -rotate-45 absolute top-5"></div>
+        <div className="w-full h-px bg-gradient-to-r from-indigo-200 to-sky-200 rotate-45 absolute top-5"></div>
+        <div className="w-full h-px bg-gradient-to-r from-indigo-200 to-sky-200 -rotate-45 absolute top-5"></div>
       </motion.div>
 
       <div className="mx-auto px-8 sm:px-12 relative z-10">
@@ -136,7 +136,7 @@ const HomeInfo = () => {
         >
           {/* Decorative quote marks */}
           <motion.span
-            className="text-8xl text-[#e6b400]/10 font-serif absolute -top-10 left-0 md:left-10"
+            className="text-8xl text-indigo-300/10 font-serif absolute -top-10 left-0 md:left-10"
             variants={quoteMarkVariants}
           >
             "
@@ -153,7 +153,7 @@ const HomeInfo = () => {
                 variants={itemVariants}
               >
                 #Delivering
-                <div className="absolute -bottom-1 left-0 right-0 h-1 bg-[#e6b400]"></div>
+                <div className="absolute -bottom-1 left-0 right-0 h-1 bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600"></div>
               </motion.span>
               <motion.span className="inline-block" variants={itemVariants}>
                 Excellence in Consulting
@@ -179,14 +179,14 @@ const HomeInfo = () => {
             className="flex justify-center"
             variants={contentVariants}
           >
-            <Button to="/services" color="yellow" className="px-8 py-3">
+            <Button to="/services" color="gradient" className="px-8 py-3">
               Explore Our Services
             </Button>
           </motion.div>
 
           {/* Decorative quote marks */}
           <motion.span
-            className="text-8xl text-[#e6b400]/10 font-serif absolute -bottom-20 right-0 md:right-10"
+            className="text-8xl text-indigo-300/10 font-serif absolute -bottom-20 right-0 md:right-10"
             variants={quoteMarkVariants}
           >
             "

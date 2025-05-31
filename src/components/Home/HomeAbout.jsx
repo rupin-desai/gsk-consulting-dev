@@ -1,192 +1,225 @@
-import React from "react";
+import React, { useRef } from "react";
 import Button from "../../ui/Components/Button";
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { Target, Users, Award, Briefcase, ChevronRight } from "lucide-react";
 
 const HomeAbout = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  // Create refs for each section we want to animate when in view
+  const sectionRef = useRef(null);
+  const headerRef = useRef(null);
+  const storyRef = useRef(null);
+  const valuesRef = useRef(null);
+  const imageRef = useRef(null);
 
-  // Container variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+  // Check if elements are in view
+  const isSectionInView = useInView(sectionRef, { once: true, amount: 0.1 });
+  const isHeaderInView = useInView(headerRef, { once: true, amount: 0.6 });
+  const isStoryInView = useInView(storyRef, { once: true, amount: 0.4 });
+  const isValuesInView = useInView(valuesRef, { once: true, amount: 0.4 });
+  const isImageInView = useInView(imageRef, { once: true, amount: 0.3 });
 
-  // Text content variants
-  const textContentVariants = {
-    hidden: {
-      opacity: 0,
-      transform: "translateX(-50px)",
-    },
-    visible: {
-      opacity: 1,
-      transform: "translateX(0px)",
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 15,
-        staggerChildren: 0.08,
-      },
-    },
-  };
-
-  // Image variants
-  const imageVariants = {
-    hidden: {
-      opacity: 0,
-      transform: "translateX(50px)",
-    },
-    visible: {
-      opacity: 1,
-      transform: "translateX(0px)",
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 15,
-      },
-    },
-  };
-
-  // Item variants
+  // Simplified animation variants with transform3d
   const itemVariants = {
     hidden: {
       opacity: 0,
-      transform: "translateY(20px)",
+      transform: "translate3d(0, 20px, 0)",
     },
     visible: {
       opacity: 1,
-      transform: "translateY(0px)",
+      transform: "translate3d(0, 0, 0)",
       transition: {
         type: "spring",
-        stiffness: 120,
-        damping: 14,
+        stiffness: 70,
+        damping: 12,
       },
     },
   };
+
+  const imageVariants = {
+    hidden: {
+      opacity: 0,
+      transform: "translate3d(20px, 0, 0)",
+    },
+    visible: {
+      opacity: 1,
+      transform: "translate3d(0, 0, 0)",
+      transition: {
+        type: "spring",
+        stiffness: 70,
+        damping: 12,
+      },
+    },
+  };
+
+  // Core values data
+  const values = [
+    {
+      title: "Excellence",
+      description: "We pursue excellence in everything we do",
+      icon: <Target size={20} />,
+      color: "from-indigo-600 to-sky-600",
+    },
+    {
+      title: "Collaboration",
+      description: "We work alongside our clients as true partners",
+      icon: <Users size={20} />,
+      color: "from-sky-600 to-teal-600",
+    },
+    {
+      title: "Integrity",
+      description: "We uphold the highest ethical standards",
+      icon: <Award size={20} />,
+      color: "from-teal-600 to-indigo-600",
+    },
+    {
+      title: "Innovation",
+      description: "We embrace creative solutions to complex problems",
+      icon: <Briefcase size={20} />,
+      color: "from-indigo-600 to-teal-600",
+    },
+  ];
 
   return (
     <section
       id="home-about-section"
-      className="py-16 lg:py-24 px-12 md:px-24"
-      ref={ref}
+      className="py-16 md:px-24 relative overflow-hidden bg-gray-50"
+      ref={sectionRef}
+      style={{
+        perspective: 1000,
+        backfaceVisibility: "hidden",
+      }}
     >
-      <motion.div
-        className="container mx-auto px-4"
-        variants={containerVariants}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-      >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
-          <motion.div variants={textContentVariants}>
-            <motion.h2
-              className="text-3xl lg:text-4xl font-bold text-gray-800"
-              variants={itemVariants}
-            >
-              About GSK Consultants
-            </motion.h2>
+      {/* Background elements */}
+      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-r from-teal-50 to-transparent -z-10"></div>
 
-            {/* Decorative Yellow Line */}
+      <div className="container mx-auto px-4">
+        {/* Section header */}
+        <motion.div
+          ref={headerRef}
+          className="text-center max-w-3xl mx-auto mb-12"
+          variants={itemVariants}
+          initial="hidden"
+          animate={isHeaderInView ? "visible" : "hidden"}
+          style={{ willChange: "transform, opacity" }}
+        >
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">
+            About GSK Consultants
+          </h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 mx-auto mb-6"></div>
+          
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          {/* Left column - company info */}
+          <div className="space-y-8">
+            {/* Company overview */}
             <motion.div
-              className="w-20 h-1 bg-[#e6b400] mt-4 mb-6"
+              ref={storyRef}
               variants={itemVariants}
-            ></motion.div>
-
-            <motion.p className="text-gray-600 mb-6" variants={itemVariants}>
-              At GSK Consultants, we help businesses turn ideas into impactful
-              results. With our deep expertise in consulting and project
-              management, we work alongside organizations to solve challenges,
-              optimize operations, and lead projects to success — on time and
-              within budget.
-            </motion.p>
-
-            <motion.div className="space-y-4 mb-8" variants={itemVariants}>
-              <motion.div className="flex items-start" variants={itemVariants}>
-                <div className="flex-shrink-0 mt-1">
-                  <div className="w-4 h-4 rounded-full bg-[#e6b400]"></div>
-                </div>
-                <p className="ml-4 text-gray-600">
-                  <span className="font-semibold">
-                    Business & Management Consulting:
-                  </span>{" "}
-                  Expert advice to enhance decision-making and drive growth
-                </p>
-              </motion.div>
-
-              <motion.div className="flex items-start" variants={itemVariants}>
-                <div className="flex-shrink-0 mt-1">
-                  <div className="w-4 h-4 rounded-full bg-[#e6b400]"></div>
-                </div>
-                <p className="ml-4 text-gray-600">
-                  <span className="font-semibold">
-                    Project Management Services:
-                  </span>{" "}
-                  From planning to delivery, we handle every phase with
-                  precision
-                </p>
-              </motion.div>
-
-              <motion.div className="flex items-start" variants={itemVariants}>
-                <div className="flex-shrink-0 mt-1">
-                  <div className="w-4 h-4 rounded-full bg-[#e6b400]"></div>
-                </div>
-                <p className="ml-4 text-gray-600">
-                  <span className="font-semibold">Customized Solutions:</span>{" "}
-                  We tailor our services to meet your exact needs
-                </p>
-              </motion.div>
+              initial="hidden"
+              animate={isStoryInView ? "visible" : "hidden"}
+              className="space-y-3"
+              style={{ willChange: "transform, opacity" }}
+            >
+              
+              <p className="text-gray-600">
+                GSK Consultants is a premier management consulting firm helping
+                businesses navigate complex challenges and seize opportunities.
+                Our diverse team of industry veterans brings decades of
+                experience to every project, guiding organizations across
+                sectors to achieve sustainable growth.
+              </p>
+              <p className="text-gray-600">
+                Founded in 2013 in Mumbai, we've grown to a team of over 50
+                consultants serving clients across India and internationally.
+                Our approach combines deep industry knowledge with innovative
+                solutions to deliver measurable results.
+              </p>
             </motion.div>
 
-            <motion.div variants={itemVariants}>
-              <Button to="/about" color="yellow" variant="primary">
-                Learn More About Us
-              </Button>
-            </motion.div>
-          </motion.div>
+            {/* Core values - simplified grid */}
+            <motion.div
+              ref={valuesRef}
+              variants={itemVariants}
+              initial="hidden"
+              animate={isValuesInView ? "visible" : "hidden"}
+              className="space-y-3"
+              style={{ willChange: "transform, opacity" }}
+            >
+              
 
-          {/* Images Grid */}
-          <motion.div className="relative" variants={imageVariants}>
-            {/* Main image */}
-            <div className="relative mb-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                {values.map((value, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="flex-shrink-0 mr-3">
+                      <div
+                        className={`w-10 h-10 rounded-full bg-gradient-to-r ${value.color} flex items-center justify-center text-white`}
+                      >
+                        {value.icon}
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-gray-800">
+                        {value.title}
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        {value.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="pt-4">
+                <Button
+                  to="/about"
+                  color="gradient"
+                  variant="primary"
+                  className="flex items-center"
+                >
+                  Learn More <ChevronRight className="ml-1 h-4 w-4" />
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Right column - image replacement */}
+          <motion.div
+            ref={imageRef}
+            variants={imageVariants}
+            initial="hidden"
+            animate={isImageInView ? "visible" : "hidden"}
+            className="relative"
+            style={{ willChange: "transform, opacity" }}
+          >
+            <div className="rounded-lg overflow-hidden shadow-lg relative">
               <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80"
-                alt="Business Meeting"
-                className="rounded-lg shadow-lg w-full h-64 object-cover"
+                src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
+                alt="Business team collaborating"
+                className="w-full h-full object-cover aspect-[4/3]"
               />
+              {/* Subtle gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
             </div>
 
-            {/* Two smaller images in a row */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="relative">
-                <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                  alt="Team Collaboration"
-                  className="rounded-lg shadow-lg w-full h-40 object-cover"
-                />
-              </div>
+            {/* Decorative elements */}
+            <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-indigo-200 rounded-lg -z-10"></div>
+            <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-r from-indigo-100 to-sky-100 rounded-lg -z-10"></div>
 
-              <div className="relative">
-                <img
-                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                  alt="Project Planning"
-                  className="rounded-lg shadow-lg w-full h-40 object-cover"
-                />
-              </div>
+            {/* Quote overlay */}
+            <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-md">
+              <p className="text-gray-700 text-sm italic">
+                "Our mission is to empower businesses with the strategic
+                insights and operational excellence they need to thrive in
+                today's competitive landscape."
+              </p>
+              <p className="text-right text-indigo-600 font-medium text-sm mt-2">
+                — Founder & CEO
+              </p>
             </div>
-
-            {/* Decorative Elements */}
-            <div className="absolute -bottom-5 -left-5 w-24 h-24 bg-[#e6b400]/10 rounded-lg -z-10"></div>
-            <div className="absolute -top-5 -right-5 w-24 h-24 bg-[#e6b400]/10 rounded-lg -z-10"></div>
           </motion.div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };

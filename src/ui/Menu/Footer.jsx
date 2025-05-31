@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className=" pt-12 pb-8 border-t">
+    <footer className="pt-12 pb-8 border-t">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Logo Column */}
@@ -13,7 +13,7 @@ const Footer = () => {
               <img
                 src="/logos/logo_full.png"
                 alt="GSK Consulting Logo"
-                className="h-24 md:h-24 "
+                className="h-24 md:h-24"
               />
             </Link>
             <p className="text-gray-600 mt-4 text-center md:text-left">
@@ -23,20 +23,20 @@ const Footer = () => {
 
           {/* Services Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-[#e6b400]">
+            <h3 className="text-lg font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600">
               Our Services
             </h3>
             <ul className="space-y-2">
-              <li className="text-gray-600 hover:text-[#e6b400] transition-colors">
+              <li className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 transition-colors">
                 <Link to="#">Business & Management Consulting</Link>
               </li>
-              <li className="text-gray-600 hover:text-[#e6b400] transition-colors">
+              <li className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 transition-colors">
                 <Link to="#">Project Management Services</Link>
               </li>
-              <li className="text-gray-600 hover:text-[#e6b400] transition-colors">
+              <li className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 transition-colors">
                 <Link to="#">Customized Solutions</Link>
               </li>
-              <li className="text-gray-600 hover:text-[#e6b400] transition-colors">
+              <li className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600 transition-colors">
                 <Link to="#">Strategic Planning</Link>
               </li>
             </ul>
@@ -44,19 +44,19 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-[#e6b400]">
+            <h3 className="text-lg font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600">
               Contact Us
             </h3>
             <ul className="space-y-3">
               <li className="flex items-center">
-                <Phone size={20} className="mr-2 text-[#e6b400]" />
-                <span className="text-gray-600 hover:text-[#e6b400]">
+                <Phone size={20} className="mr-2 text-indigo-600" />
+                <span className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
                   <a href="tel:+9193226 06890">(+91) 93226 06890</a>
                 </span>
               </li>
               <li className="flex items-center">
-                <Mail size={20} className="mr-2 text-[#e6b400]" />
-                <span className="text-gray-600 hover:text-[#e6b400]">
+                <Mail size={20} className="mr-2 text-sky-600" />
+                <span className="text-gray-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-600 hover:via-sky-600 hover:to-teal-600">
                   <a href="mailto:info@gskconsulting.com">
                     info@gskconsulting.com
                   </a>
@@ -65,7 +65,7 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin
                   size={20}
-                  className="mr-2 text-[#e6b400] flex-shrink-0 mt-1"
+                  className="mr-2 text-teal-600 flex-shrink-0 mt-1"
                 />
                 <span className="text-gray-600">
                   Sector 12, Kharghar, Navi Mumbai,

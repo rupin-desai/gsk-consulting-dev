@@ -107,7 +107,9 @@ const HomeHero = () => {
             className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4"
             variants={subheadingVariants}
           >
-            <span className="text-[#e6b400]">Your Trusted Partner</span>
+            <span className="bg-gradient-to-r from-indigo-400 via-sky-400 to-teal-400 bg-clip-text text-transparent">
+              Your Trusted Partner
+            </span>
           </motion.h1>
 
           <motion.p
@@ -119,7 +121,7 @@ const HomeHero = () => {
           </motion.p>
 
           <motion.div className="flex justify-center" variants={buttonVariants}>
-            <Button to="/contact" color="yellow" variant="primary">
+            <Button to="/contact" color="gradient" variant="primary">
               Get Started
             </Button>
           </motion.div>
