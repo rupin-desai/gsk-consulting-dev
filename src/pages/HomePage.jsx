@@ -6,6 +6,7 @@ import HomeWhyUs from "../components/Home/HomeWhyUs";
 import HomeInfo from "../components/Home/HomeInfo";
 import HomeColabs from "../components/Home/HomeColabs";
 import HomeStats from "../components/Home/HomeStats";
+import HomeContact from "../components/Home/HomeContact"
 
 const HomePage = () => {
   return (
@@ -18,6 +19,7 @@ const HomePage = () => {
       <HomeAbout />
       <HomeWhyUs />
       <HomeInfo />
+      <HomeContact />
     </>
   );
 };

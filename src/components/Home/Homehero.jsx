@@ -3,6 +3,24 @@ import Button from "../../ui/Components/Button";
 import { motion } from "framer-motion";
 
 const HomeHero = () => {
+  // Function to scroll to the HomeStats section
+  const scrollToStats = (e) => {
+    e.preventDefault(); // Prevent default link behavior
+    const statsSection = document.getElementById("home-stats-section");
+    if (statsSection) {
+      const navbarHeight = 80; // Estimated navbar height
+      const sectionPosition =
+        statsSection.getBoundingClientRect().top +
+        window.pageYOffset -
+        navbarHeight;
+
+      window.scrollTo({
+        top: sectionPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -121,7 +139,12 @@ const HomeHero = () => {
           </motion.p>
 
           <motion.div className="flex justify-center" variants={buttonVariants}>
-            <Button to="/contact" color="gradient" variant="primary">
+            <Button
+              color="gradient"
+              variant="primary"
+              onClick={scrollToStats}
+              className="px-6 py-3 text-lg"
+            >
               Get Started
             </Button>
           </motion.div>

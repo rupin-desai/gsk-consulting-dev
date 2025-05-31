@@ -116,8 +116,9 @@ const HomeStats = () => {
 
   return (
     <section
+      id="home-stats-section" // Added ID for scroll target
       ref={ref}
-      className="pt-16 bg-gray-50"
+      className="pt-24 pb-4 bg-gray-50"
       style={{
         transform: "translate3d(0, 0, 0)",
         backfaceVisibility: "hidden",
@@ -174,7 +175,7 @@ const HomeStats = () => {
                   <div className="md:text-left">
                     {/* Count number */}
                     <motion.div
-                      className="text-3xl md:text-5xl font-bold text-gray-800 flex items-end justify-center md:justify-start"
+                      className="text-3xl md:text-6xl font-medium text-gray-800 flex items-end justify-center md:justify-start"
                       variants={countVariants}
                       initial="initial"
                       animate={isInView ? "animate" : "initial"}

@@ -67,7 +67,7 @@ const HomeColabs = () => {
     >
       <div className="container mx-auto px-4">
         {/* Section title */}
-        <motion.div
+        {/* <motion.div
           className="text-center mb-12"
           ref={headingRef}
           variants={headingVariants}
@@ -79,7 +79,7 @@ const HomeColabs = () => {
             Our Trusted Partners
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 mx-auto mt-4"></div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Marquee container with overflow hidden */}
         <div className="relative overflow-hidden w-full">
@@ -139,11 +139,11 @@ const LogoItem = ({ logo }) => {
 
   return (
     <motion.div
-      className={`flex-shrink-0 flex items-center justify-center mx-8 md:mx-12 h-12 md:h-16 bg-white ${
+      className={`flex-shrink-0 flex items-center justify-center mx-8 md:mx-12 h-28 md:h-32  ${
         isHovered ? "" : "grayscale opacity-70"
       } transition-all rounded-lg p-3`}
       style={{
-        minWidth: "80px",
+        minWidth: "150px",
         scale,
       }}
       onHoverStart={onHoverStart}

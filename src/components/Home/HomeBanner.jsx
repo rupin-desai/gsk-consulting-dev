@@ -156,7 +156,7 @@ const HomeBanner = () => {
 
   return (
     <section
-      className="relative z-10 py-16 bg-gray-50 overflow-hidden"
+      className="relative z-10 py-24 bg-gray-50 overflow-hidden"
       style={{
         perspective: 1000,
         backfaceVisibility: "hidden",
@@ -376,14 +376,7 @@ const HomeBanner = () => {
         </div>
       </div>
 
-      {/* Background decorative elements */}
-      <motion.div
-        ref={bgTopRef}
-        className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-l from-indigo-50 to-transparent -z-10"
-        variants={backgroundVariants}
-        initial="hidden"
-        animate={isBgTopInView ? "visible" : "hidden"}
-      ></motion.div>
+    
 
       <motion.div
         ref={bgBottomRef}

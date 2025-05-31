@@ -51,30 +51,30 @@ const HomeAbout = () => {
     },
   };
 
-  // Core values data
+  // Core values data - simplified descriptions
   const values = [
     {
       title: "Excellence",
-      description: "We pursue excellence in everything we do",
-      icon: <Target size={20} />,
+      description: "Delivering the highest quality in all we do",
+      icon: <Target size={22} />,
       color: "from-indigo-600 to-sky-600",
     },
     {
       title: "Collaboration",
-      description: "We work alongside our clients as true partners",
-      icon: <Users size={20} />,
+      description: "Working as true partners with our clients",
+      icon: <Users size={22} />,
       color: "from-sky-600 to-teal-600",
     },
     {
       title: "Integrity",
-      description: "We uphold the highest ethical standards",
-      icon: <Award size={20} />,
+      description: "Upholding the highest ethical standards",
+      icon: <Award size={22} />,
       color: "from-teal-600 to-indigo-600",
     },
     {
       title: "Innovation",
-      description: "We embrace creative solutions to complex problems",
-      icon: <Briefcase size={20} />,
+      description: "Creating solutions for complex challenges",
+      icon: <Briefcase size={22} />,
       color: "from-indigo-600 to-teal-600",
     },
   ];
@@ -102,38 +102,33 @@ const HomeAbout = () => {
           animate={isHeaderInView ? "visible" : "hidden"}
           style={{ willChange: "transform, opacity" }}
         >
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">
             About GSK Consultants
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 mx-auto mb-6"></div>
-          
+          <div className="w-24 h-1 bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 mx-auto mb-6"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Left column - company info */}
           <div className="space-y-8">
-            {/* Company overview */}
+            {/* Company overview - reduced content, larger text */}
             <motion.div
               ref={storyRef}
               variants={itemVariants}
               initial="hidden"
               animate={isStoryInView ? "visible" : "hidden"}
-              className="space-y-3"
+              className="space-y-4"
               style={{ willChange: "transform, opacity" }}
             >
-              
-              <p className="text-gray-600">
-                GSK Consultants is a premier management consulting firm helping
-                businesses navigate complex challenges and seize opportunities.
-                Our diverse team of industry veterans brings decades of
-                experience to every project, guiding organizations across
-                sectors to achieve sustainable growth.
+              <p className="text-gray-700 text-lg leading-relaxed">
+                GSK Consultants is a premier consulting firm helping businesses
+                navigate challenges and seize opportunities. Our expert team
+                brings decades of experience to every project.
               </p>
-              <p className="text-gray-600">
-                Founded in 2013 in Mumbai, we've grown to a team of over 50
-                consultants serving clients across India and internationally.
-                Our approach combines deep industry knowledge with innovative
-                solutions to deliver measurable results.
+              <p className="text-gray-700 text-lg leading-relaxed">
+                Founded in 2013, we've grown to serve clients across India and
+                internationally with innovative solutions that deliver
+                measurable results.
               </p>
             </motion.div>
 
@@ -143,47 +138,43 @@ const HomeAbout = () => {
               variants={itemVariants}
               initial="hidden"
               animate={isValuesInView ? "visible" : "hidden"}
-              className="space-y-3"
+              className="space-y-4"
               style={{ willChange: "transform, opacity" }}
             >
-              
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-2">
                 {values.map((value, index) => (
                   <div key={index} className="flex items-start">
                     <div className="flex-shrink-0 mr-3">
                       <div
-                        className={`w-10 h-10 rounded-full bg-gradient-to-r ${value.color} flex items-center justify-center text-white`}
+                        className={`w-12 h-12 rounded-full bg-gradient-to-r ${value.color} flex items-center justify-center text-white`}
                       >
                         {value.icon}
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-medium text-gray-800">
+                      <h4 className="font-medium text-gray-800 text-lg">
                         {value.title}
                       </h4>
-                      <p className="text-sm text-gray-600">
-                        {value.description}
-                      </p>
+                      <p className="text-gray-600">{value.description}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="pt-4">
+              <div className="pt-6">
                 <Button
                   to="/about"
                   color="gradient"
                   variant="primary"
-                  className="flex items-center"
+                  className="flex items-center text-base"
                 >
-                  Learn More <ChevronRight className="ml-1 h-4 w-4" />
+                  Learn More <ChevronRight className="ml-1 h-5 w-5" />
                 </Button>
               </div>
             </motion.div>
           </div>
 
-          {/* Right column - image replacement */}
+          {/* Right column - image */}
           <motion.div
             ref={imageRef}
             variants={imageVariants}
@@ -206,14 +197,13 @@ const HomeAbout = () => {
             <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-indigo-200 rounded-lg -z-10"></div>
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-r from-indigo-100 to-sky-100 rounded-lg -z-10"></div>
 
-            {/* Quote overlay */}
+            {/* Quote overlay - simplified */}
             <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-md">
-              <p className="text-gray-700 text-sm italic">
-                "Our mission is to empower businesses with the strategic
-                insights and operational excellence they need to thrive in
-                today's competitive landscape."
+              <p className="text-gray-700 text-base italic">
+                "Empowering businesses with strategic insights and operational
+                excellence to thrive in today's competitive landscape."
               </p>
-              <p className="text-right text-indigo-600 font-medium text-sm mt-2">
+              <p className="text-right text-indigo-600 font-medium text-base mt-2">
                 — Founder & CEO
               </p>
             </div>

@@ -9,7 +9,7 @@ import {
   BriefcaseIcon,
 } from "lucide-react";
 
-const WhyUsCard = ({ icon, title, description, variants }) => {
+const WhyUsCard = ({ icon, title, description, variants, iconColor }) => {
   return (
     <motion.div
       variants={variants}
@@ -20,7 +20,9 @@ const WhyUsCard = ({ icon, title, description, variants }) => {
 
       {/* Content container - stays above the curtain overlay */}
       <div className="relative z-10 flex flex-col items-center justify-center flex-1">
-        <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-r from-indigo-100 to-sky-100 group-hover:bg-white/20 rounded-full text-indigo-600 group-hover:text-white transition-colors duration-300">
+        <div
+          className={`w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-r from-${iconColor}-100 to-sky-100 group-hover:bg-white/20 rounded-full text-${iconColor}-600 transition-colors duration-300`}
+        >
           {icon}
         </div>
 
@@ -110,47 +112,54 @@ const HomeWhyUs = () => {
     },
   };
 
+  // Features with reduced text content and added icon colors
   const features = [
     {
       icon: <TrophyIcon size={32} />,
       title: "Experienced Professionals",
       description:
-        "Our team brings decades of industry experience across various sectors, delivering expertise you can rely on for your most critical business challenges.",
+        "Industry experts with decades of experience across diverse sectors.",
+      iconColor: "indigo",
     },
     {
       icon: <UsersIcon size={32} />,
       title: "Client-Focused Approach",
       description:
-        "We listen first, then collaborate closely with you to develop solutions that align perfectly with your business goals and organizational culture.",
+        "Solutions tailored to your specific business goals and culture.",
+      iconColor: "teal",
     },
     {
       icon: <ScaleIcon size={32} />,
       title: "Scalable Solutions",
       description:
-        "Our services and solutions scale with your business, ensuring sustainable growth and adaptability to changing market conditions.",
+        "Services that grow with your business and adapt to market changes.",
+      iconColor: "sky",
     },
     {
       icon: <BarChartIcon size={32} />,
       title: "Proven Track Record",
       description:
-        "We've successfully delivered hundreds of projects across industries, consistently exceeding client expectations with measurable results.",
+        "Hundreds of successful projects with measurable client results.",
+      iconColor: "indigo",
     },
     {
       icon: <PieChartIcon size={32} />,
       title: "Data-Driven Strategy",
       description:
-        "Our recommendations are backed by comprehensive analysis and industry insights, ensuring decisions are based on solid evidence rather than assumptions.",
+        "Recommendations backed by thorough analysis and industry insights.",
+      iconColor: "teal",
     },
     {
       icon: <BriefcaseIcon size={32} />,
       title: "End-to-End Solutions",
       description:
-        "From initial strategy to final implementation, we provide complete project oversight and management, ensuring seamless execution at every stage.",
+        "Complete project oversight from strategy to implementation.",
+      iconColor: "sky",
     },
   ];
 
   return (
-    <section className="py-16 px-12 sm:px-24" ref={ref}>
+    <section className="py-16 px-12 sm:px-24 bg-gray-50" ref={ref}>
       <motion.div
         className="container mx-auto px-4"
         variants={containerVariants}
@@ -178,8 +187,7 @@ const HomeWhyUs = () => {
             className="text-gray-600 max-w-3xl mx-auto"
             variants={titleElementVariants}
           >
-            At GSK Consultants, we provide unparalleled consulting and project
-            management services. Here's what sets us apart.
+            What sets our consulting and project management services apart.
           </motion.p>
         </motion.div>
 
@@ -197,6 +205,7 @@ const HomeWhyUs = () => {
               title={feature.title}
               description={feature.description}
               variants={cardVariants}
+              iconColor={feature.iconColor}
             />
           ))}
         </motion.div>

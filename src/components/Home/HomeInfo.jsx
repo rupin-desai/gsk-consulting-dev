@@ -6,6 +6,24 @@ const HomeInfo = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
+  // Function to scroll to the HomeContact section
+  const scrollToContact = (e) => {
+    e.stopPropagation(); // Prevent the section click event
+    const contactSection = document.getElementById("home-contact-section");
+    if (contactSection) {
+      const navbarHeight = 80; // Estimated navbar height
+      const sectionPosition =
+        contactSection.getBoundingClientRect().top +
+        window.pageYOffset -
+        navbarHeight;
+
+      window.scrollTo({
+        top: sectionPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -20,11 +38,11 @@ const HomeInfo = () => {
   const decorationVariants = {
     hidden: {
       opacity: 0,
-      scale: 0.8,
+      transform: "translate3d(0, 0, 0) scale(0.8)",
     },
     visible: {
       opacity: 1,
-      scale: 1,
+      transform: "translate3d(0, 0, 0) scale(1)",
       transition: {
         type: "spring",
         stiffness: 70,
@@ -33,35 +51,18 @@ const HomeInfo = () => {
     },
   };
 
-  const quoteMarkVariants = {
-    hidden: {
-      opacity: 0,
-      transform: "translateY(20px)",
-    },
-    visible: {
-      opacity: 0.1,
-      transform: "translateY(0px)",
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 15,
-      },
-    },
-  };
-
   const titleVariants = {
     hidden: {
       opacity: 0,
-      transform: "translateY(30px)",
+      transform: "translate3d(0, 30px, 0)",
     },
     visible: {
       opacity: 1,
-      transform: "translateY(0px)",
+      transform: "translate3d(0, 0, 0)",
       transition: {
         type: "spring",
         stiffness: 120,
         damping: 14,
-        staggerChildren: 0.05,
       },
     },
   };
@@ -69,128 +70,103 @@ const HomeInfo = () => {
   const contentVariants = {
     hidden: {
       opacity: 0,
-      transform: "translateY(30px)",
+      transform: "translate3d(0, 30px, 0)",
     },
     visible: {
       opacity: 1,
-      transform: "translateY(0px)",
+      transform: "translate3d(0, 0, 0)",
       transition: {
         type: "spring",
         stiffness: 100,
         damping: 15,
-        staggerChildren: 0.05,
+        delay: 0.1,
       },
     },
   };
 
-  const itemVariants = {
+  const buttonVariants = {
     hidden: {
       opacity: 0,
-      transform: "translateY(20px)",
+      transform: "translate3d(0, 20px, 0)",
     },
     visible: {
       opacity: 1,
-      transform: "translateY(0px)",
+      transform: "translate3d(0, 0, 0)",
       transition: {
         type: "spring",
         stiffness: 120,
         damping: 14,
+        delay: 0.2,
       },
     },
   };
 
   return (
-    <section className="py-20 relative overflow-hidden" ref={ref}>
+    <section
+      className="py-16 relative overflow-hidden bg-gradient-to-r from-indigo-50 via-white to-teal-50"
+      ref={ref}
+      style={{
+        perspective: 1000,
+        backfaceVisibility: "hidden",
+      }}
+    >
       {/* Decorative elements */}
       <motion.div
-        className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-r from-indigo-100/50 to-sky-100/50 rounded-full translate-x-1/3 translate-y-1/3"
+        className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-r from-indigo-100/50 to-sky-100/50 rounded-full translate-x-1/3 translate-y-1/3 pointer-events-none"
         variants={decorationVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
+        style={{ willChange: "transform, opacity" }}
       ></motion.div>
 
       <motion.div
-        className="absolute top-1/2 left-3/4 w-10 h-10 bg-gradient-to-r from-indigo-100/50 to-sky-100/50 rounded-full"
+        className="absolute top-1/4 left-10 w-16 h-16 bg-gradient-to-r from-teal-100/40 to-indigo-100/40 rounded-full pointer-events-none"
         variants={decorationVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
+        style={{ willChange: "transform, opacity" }}
       ></motion.div>
 
-      {/* Diagonal lines decoration */}
-      <motion.div
-        className="absolute bottom-10 left-10 w-20 h-20"
-        variants={decorationVariants}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-      >
-        <div className="w-full h-px bg-gradient-to-r from-indigo-200 to-sky-200 rotate-45 absolute top-5"></div>
-        <div className="w-full h-px bg-gradient-to-r from-indigo-200 to-sky-200 -rotate-45 absolute top-5"></div>
-      </motion.div>
-
-      <div className="mx-auto px-8 sm:px-12 relative z-10">
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           className="max-w-4xl mx-auto text-center"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          {/* Decorative quote marks */}
-          <motion.span
-            className="text-8xl text-indigo-300/10 font-serif absolute -top-10 left-0 md:left-10"
-            variants={quoteMarkVariants}
-          >
-            "
-          </motion.span>
-
           {/* Title */}
           <motion.h2
             className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 relative"
             variants={titleVariants}
+            style={{ willChange: "transform, opacity" }}
           >
-            <div className="flex flex-wrap justify-center gap-x-2 mb-2">
-              <motion.span
-                className="inline-block relative pb-3"
-                variants={itemVariants}
-              >
-                #Delivering
-                <div className="absolute -bottom-1 left-0 right-0 h-1 bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600"></div>
-              </motion.span>
-              <motion.span className="inline-block" variants={itemVariants}>
-                Excellence in Consulting
-              </motion.span>
-            </div>
-            <motion.span className="block mt-3 md:mt-2" variants={itemVariants}>
-              and Project Management
-            </motion.span>
+            Ready to Transform Your Business?
           </motion.h2>
 
           {/* Content */}
           <motion.p
             className="text-gray-600 mb-8 text-lg leading-relaxed"
             variants={contentVariants}
+            style={{ willChange: "transform, opacity" }}
           >
-            Whether you're launching a new initiative, improving existing
-            processes, or managing complex projects, our team is here to guide
-            you with strategic insight, hands-on execution, and measurable
-            outcomes.
+            Let's discuss how our strategic consulting and project management
+            expertise can help you achieve measurable results and sustainable
+            growth.
           </motion.p>
 
           <motion.div
             className="flex justify-center"
-            variants={contentVariants}
+            variants={buttonVariants}
+            style={{ willChange: "transform, opacity" }}
           >
-            <Button to="/services" color="gradient" className="px-8 py-3">
-              Explore Our Services
+            <Button
+              color="gradient"
+              className="px-8 py-3 text-lg"
+              onClick={scrollToContact}
+            >
+              Get in Touch Today
             </Button>
           </motion.div>
-
-          {/* Decorative quote marks */}
-          <motion.span
-            className="text-8xl text-indigo-300/10 font-serif absolute -bottom-20 right-0 md:right-10"
-            variants={quoteMarkVariants}
-          >
-            "
-          </motion.span>
         </motion.div>
       </div>
     </section>
