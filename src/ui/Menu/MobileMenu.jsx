@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 const MobileMenu = ({ isOpen, setIsOpen }) => {
   const [expandedMenus, setExpandedMenus] = useState({
-    higher: false,
-    international: false,
+    services: false,
+    industries: false,
   });
   const menuRef = useRef(null);
 
@@ -91,23 +91,23 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
         </Link>
 
         <Link
-          to="/about"
+          to="#"
           className="block py-2 text-gray-700 hover:text-[#e6b400] font-medium transition-colors"
           onClick={() => setIsOpen(false)}
         >
           About
         </Link>
 
-        {/* Higher Education with submenu - now contains international programs */}
+        {/* Services with submenu */}
         <div className="py-2">
           <div
             className="flex justify-between items-center cursor-pointer group"
-            onClick={() => toggleSubmenu("higher")}
+            onClick={() => toggleSubmenu("services")}
           >
             <span className="text-gray-700 group-hover:text-[#e6b400] font-medium transition-colors">
-              Higher Education
+              Services
             </span>
-            {expandedMenus.higher ? (
+            {expandedMenus.services ? (
               <ChevronUp
                 size={20}
                 className="text-gray-500 group-hover:text-[#e6b400] transition-colors"
@@ -120,7 +120,7 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
             )}
           </div>
 
-          {expandedMenus.higher && (
+          {expandedMenus.services && (
             <motion.div
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
@@ -128,40 +128,40 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
               className="ml-4 mt-2 space-y-2"
             >
               <Link
-                to="/higher-education/supply-chain"
+                to="#"
                 className="block py-2 text-gray-600 hover:text-[#e6b400] transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                PG Dip. in Supply Chain And Logistics Mgmt
+                Business & Management Consulting
               </Link>
               <Link
-                to="/higher-education/drone-operations"
+                to="#"
                 className="block py-2 text-gray-600 hover:text-[#e6b400] transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                PG Dip. in Drones Operations- Logistics
+                Project Management Services
               </Link>
               <Link
-                to="/higher-education/data-science"
+                to="#"
                 className="block py-2 text-gray-600 hover:text-[#e6b400] transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                PG Dip. in Data Science For Logistics
+                Strategic Planning & Execution
               </Link>
             </motion.div>
           )}
         </div>
 
-        {/* International Education with submenu - now contains MBE */}
+        {/* Industries with submenu */}
         <div className="py-2">
           <div
             className="flex justify-between items-center cursor-pointer group"
-            onClick={() => toggleSubmenu("international")}
+            onClick={() => toggleSubmenu("industries")}
           >
             <span className="text-gray-700 group-hover:text-[#e6b400] font-medium transition-colors">
-              International Education
+              Industries
             </span>
-            {expandedMenus.international ? (
+            {expandedMenus.industries ? (
               <ChevronUp
                 size={20}
                 className="text-gray-500 group-hover:text-[#e6b400] transition-colors"
@@ -174,7 +174,7 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
             )}
           </div>
 
-          {expandedMenus.international && (
+          {expandedMenus.industries && (
             <motion.div
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
@@ -182,18 +182,32 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
               className="ml-4 mt-2 space-y-2"
             >
               <Link
-                to="/international-education/mbe"
+                to="#"
                 className="block py-2 text-gray-600 hover:text-[#e6b400] transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                Master in Business Engineering (MBE)
+                Manufacturing
+              </Link>
+              <Link
+                to="#"
+                className="block py-2 text-gray-600 hover:text-[#e6b400] transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Technology
+              </Link>
+              <Link
+                to="#"
+                className="block py-2 text-gray-600 hover:text-[#e6b400] transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Healthcare
               </Link>
             </motion.div>
           )}
         </div>
 
         <Link
-          to="/contact"
+          to="#"
           className="block py-2 text-gray-700 hover:text-[#e6b400] font-medium transition-colors"
           onClick={() => setIsOpen(false)}
         >
@@ -201,7 +215,7 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
         </Link>
 
         <Link
-          to="/contact"
+          to="#"
           className="block bg-[#e6b400] text-white px-6 py-3 rounded-md hover:bg-opacity-90 transition-colors text-center mt-6"
           onClick={() => setIsOpen(false)}
         >

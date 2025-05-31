@@ -218,12 +218,8 @@ const Navbar = () => {
             </NavLink>
 
             <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive
-                  ? "font-medium uppercase text-[#e6b400] relative nav-link nav-link-active"
-                  : "font-medium uppercase text-gray-700 hover:text-[#e6b400] relative nav-link transition-colors"
-              }
+              to="#"
+              className="font-medium uppercase text-gray-700 hover:text-[#e6b400] relative nav-link transition-colors"
             >
               About
             </NavLink>
@@ -237,22 +233,14 @@ const Navbar = () => {
                 onMouseLeave={hideDropdown}
               >
                 <NavLink
-                  to="/services"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "font-medium text-[#e6b400] relative nav-link nav-link-active"
-                      : "font-medium text-gray-700 hover:text-[#e6b400] relative nav-link transition-colors"
-                  }
+                  to="#"
+                  className="font-medium text-gray-700 hover:text-[#e6b400] relative nav-link transition-colors"
                 >
                   Services
                 </NavLink>
                 <ChevronDown
                   size={16}
-                  className={`transition-colors ${
-                    isPathActive("/services")
-                      ? "text-[#e6b400]"
-                      : "text-gray-600 hover:text-[#e6b400]"
-                  }`}
+                  className="text-gray-600 hover:text-[#e6b400]"
                 />
               </div>
 
@@ -270,19 +258,19 @@ const Navbar = () => {
                   }`}
                 >
                   <Link
-                    to="/services/business-consulting"
+                    to="#"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#e6b400]"
                   >
                     Business & Management Consulting
                   </Link>
                   <Link
-                    to="/services/project-management"
+                    to="#"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#e6b400]"
                   >
                     Project Management Services
                   </Link>
                   <Link
-                    to="/services/strategy"
+                    to="#"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#e6b400]"
                   >
                     Strategic Planning & Execution
@@ -300,22 +288,14 @@ const Navbar = () => {
                 onMouseLeave={hideDropdown}
               >
                 <NavLink
-                  to="/industries"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "font-medium text-[#e6b400] relative nav-link nav-link-active"
-                      : "font-medium text-gray-700 hover:text-[#e6b400] relative nav-link transition-colors"
-                  }
+                  to="#"
+                  className="font-medium text-gray-700 hover:text-[#e6b400] relative nav-link transition-colors"
                 >
                   Industries
                 </NavLink>
                 <ChevronDown
                   size={16}
-                  className={`transition-colors ${
-                    isPathActive("/industries")
-                      ? "text-[#e6b400]"
-                      : "text-gray-600 hover:text-[#e6b400]"
-                  }`}
+                  className="text-gray-600 hover:text-[#e6b400]"
                 />
               </div>
 
@@ -333,19 +313,19 @@ const Navbar = () => {
                   }`}
                 >
                   <Link
-                    to="/industries/manufacturing"
+                    to="#"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#e6b400]"
                   >
                     Manufacturing
                   </Link>
                   <Link
-                    to="/industries/technology"
+                    to="#"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#e6b400]"
                   >
                     Technology
                   </Link>
                   <Link
-                    to="/industries/healthcare"
+                    to="#"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#e6b400]"
                   >
                     Healthcare
@@ -355,12 +335,8 @@ const Navbar = () => {
             </div>
 
             <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                isActive
-                  ? "font-medium text-[#e6b400] relative nav-link nav-link-active"
-                  : "font-medium text-gray-700 hover:text-[#e6b400] relative nav-link transition-colors"
-              }
+              to="#"
+              className="font-medium text-gray-700 hover:text-[#e6b400] relative nav-link transition-colors"
             >
               Contact
             </NavLink>
@@ -368,7 +344,7 @@ const Navbar = () => {
 
           {/* Contact Button (Desktop) */}
           <div className="hidden md:block">
-            <Button to="/contact" color="yellow">
+            <Button to="#" color="yellow">
               GET STARTED
             </Button>
           </div>

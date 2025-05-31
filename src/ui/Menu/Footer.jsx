@@ -28,22 +28,16 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2">
               <li className="text-gray-600 hover:text-[#e6b400] transition-colors">
-                <Link to="/services/business-consulting">
-                  Business & Management Consulting
-                </Link>
+                <Link to="#">Business & Management Consulting</Link>
               </li>
               <li className="text-gray-600 hover:text-[#e6b400] transition-colors">
-                <Link to="/services/project-management">
-                  Project Management Services
-                </Link>
+                <Link to="#">Project Management Services</Link>
               </li>
               <li className="text-gray-600 hover:text-[#e6b400] transition-colors">
-                <Link to="/services/custom-solutions">
-                  Customized Solutions
-                </Link>
+                <Link to="#">Customized Solutions</Link>
               </li>
               <li className="text-gray-600 hover:text-[#e6b400] transition-colors">
-                <Link to="/services/strategy">Strategic Planning</Link>
+                <Link to="#">Strategic Planning</Link>
               </li>
             </ul>
           </div>
