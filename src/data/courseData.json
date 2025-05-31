@@ -1,0 +1,820 @@
+{
+  "drone-operations": {
+    "slug": "drone-operations",
+    "hero": {
+      "title": "Post Graduate Diploma in",
+      "subtitle": "Drone Operation and Logistics",
+      "description": "A specialized program designed to prepare professionals for the rapidly growing field of drone technology and its applications in logistics and supply chain management.",
+      "backgroundImage": "https://images.unsplash.com/photo-1557343569-b1d5b655b7cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+    },
+    "info": {
+      "summaryImage": "https://images.unsplash.com/photo-1506947411487-a56738267384?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "droneImage": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "summary": "Industry-focused training in drone piloting, aerial operations, and data analytics. This program prepares graduates for innovative careers in UAV logistics, delivery systems, and aerial surveillance where unmanned technology is transforming traditional supply chains.",
+      "details": [
+        {
+          "title": "1 year",
+          "subtitle": "Duration"
+        },
+        {
+          "title": "Hybrid",
+          "subtitle": "Program Type"
+        },
+        {
+          "title": "Open",
+          "subtitle": "Intake"
+        },
+        {
+          "title": "English",
+          "subtitle": "Language"
+        },
+        {
+          "title": "Post Graduate Diploma",
+          "subtitle": "Degree Title"
+        },
+        {
+          "title": "Bachelor's Degree in Any Stream",
+          "subtitle": "Eligibility Criteria"
+        }
+      ]
+    },
+    "about": {
+      "title": "About The Program",
+      "paragraphs": [
+        "The integration of drones (UAVs) in logistics is transforming last-mile delivery, warehouse automation, and supply chain surveillance. As industries adopt drone technology for greater efficiency, the demand for skilled professionals in drone operations, logistics, and compliance is rising. To meet this need, the School of Skill Education (SSE), Tata Institute of Social Sciences (TISS), in partnership with LSC and Skylark Drones - IDEAAS Skills, offers the Post Graduate Diploma in Drone Operations - Logistics.",
+        "This program offers specialized training in aerial logistics, UAV-based supply chain monitoring, and automated deliveries. With simulation-based learning, hands-on UAV training, and industry collaborations, students gain expertise in drone applications, operational safety, and regulations. Designed for careers in drone logistics, aerial surveillance, and supply chain automation, it prepares professionals for the future of logistics."
+      ],
+      "image": "https://images.pexels.com/photos/442589/pexels-photo-442589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    "outcomes": {
+      "title": "Program Outcomes",
+      "description": "Upon completing this program, participants will be able to:",
+      "image": "https://cdn-ilcphhp.nitrocdn.com/zKbjtXxEoyhCQscCotqKJXKtZpUaCOTU/assets/images/optimized/rev-8da9c3c/www.blickfeld.com/wp-content/uploads/2022/04/Generic-drones-UAVS-e-commerce-shutterstock_305478974.jpg",
+      "items": [
+        "Demonstrate proficiency in drone flight operations, adhering to safety protocols and risk assessment procedures.",
+        "Comprehend the fundamentals of drone technology, including regulatory frameworks and safety guidelines.",
+        "Utilize advanced data analytics techniques for informed decision-making in logistics and supply chain management.",
+        "Develop the ability to perform maintenance and repairs on drones, ensuring operational continuity and safety compliance.",
+        "Acquire skills in drone data management, including collection, processing, and analysis of UAV-generated data.",
+        "Implement drone technology to enhance last-mile delivery, warehouse automation, and supply chain surveillance.",
+        "Evaluate the environmental factors affecting drone operations, such as weather conditions, to ensure efficient route planning.",
+        "Understand and apply regional and international drone regulations to ensure compliance in logistics operations.",
+        "Explore emerging applications of drones in various sectors, including healthcare and disaster relief, to drive innovation in logistics."
+      ]
+    },
+    "curriculum": {
+      "title": "Course Curriculum",
+      "semesters": [
+        {
+          "title": "Semester 1",
+          "courses": [
+            {
+              "no": "01",
+              "course": "Introduction to Drones",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "02",
+              "course": "Pre-flight Inspections",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "03",
+              "course": "Drone Data Management 1",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "04",
+              "course": "Drone Data: Inventory Management",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "05",
+              "course": "Monitoring Over Dimensional Cargo",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "06",
+              "course": "Handling Situations: Aviation Security Environment",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "07",
+              "course": "Project",
+              "hours": 60,
+              "credits": 2
+            },
+            {
+              "no": "08",
+              "course": "Skill Training",
+              "hours": 300,
+              "credits": 10
+            },
+            {
+              "no": "09",
+              "course": "Domain Practicum",
+              "hours": 120,
+              "credits": "NC"
+            }
+          ]
+        },
+        {
+          "title": "Semester 2",
+          "courses": [
+            {
+              "no": "01",
+              "course": "Drone Based Warehouse Security and Surveillance",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "02",
+              "course": "Optimisation of Drone based in Plant supply",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "03",
+              "course": "Application of Drones in warehouse logistics",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "04",
+              "course": "Drone data management II",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "05",
+              "course": "Big data in drone based logistics",
+              "hours": 60,
+              "credits": 4
+            },
+            {
+              "no": "06",
+              "course": "Legal aspects of Drones in Logistics",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "07",
+              "course": "Project",
+              "hours": 60,
+              "credits": 2
+            },
+            {
+              "no": "08",
+              "course": "Skill Training",
+              "hours": 300,
+              "credits": 10
+            },
+            {
+              "no": "09",
+              "course": "Domain Practicum",
+              "hours": 120,
+              "credits": "NC"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "title": "Domain Practicum",
+          "description": "Compulsory and Non-Credit, non-evaluative component"
+        },
+        {
+          "title": "Skill Training",
+          "description": "The Skill Training component is 50% to 60% ranging from 600 hours to 720 hours per year depending upon the industry requirement"
+        }
+      ]
+    },
+    "prospects": {
+      "title": "Career Prospects",
+      "description": "Our graduates gain expertise and skills that prepare them for various roles in drone operations and logistics, including:",
+      "careers": [
+        {
+          "title": "Drone Risk Analyst",
+          "description": "Identifies and mitigates risks in drone operations for safe logistics.",
+          "icon": "ShieldCheck"
+        },
+        {
+          "title": "ODC Monitoring Specialist",
+          "description": "Monitors Over Dimensional Cargo (ODC) during loading, transit, and unloading for optimised transportation.",
+          "icon": "Search"
+        },
+        {
+          "title": "Drone Inventory Specialist",
+          "description": "Manages inventory using drones for efficient stock control.",
+          "icon": "Package"
+        },
+        {
+          "title": "Data Analyst - Drones",
+          "description": "Analyses drone data to improve inventory management and supply chain efficiency.",
+          "icon": "BarChart"
+        },
+        {
+          "title": "Drone Surveillance Officer",
+          "description": "Utilises drones for warehouse security surveillance, minimising risks of theft or damage.",
+          "icon": "Compass"
+        },
+        {
+          "title": "Drone Supply Specialist",
+          "description": "Optimises supply chain processes using drone data insights.",
+          "icon": "Network"
+        },
+        {
+          "title": "Logistics Tech Consultant",
+          "description": "Advises on drone technology integration for enhanced logistics operations.",
+          "icon": "Lightbulb"
+        },
+        {
+          "title": "Drone Operations Manager",
+          "description": "Oversees drone operations for inventory management, security, and ODC monitoring in logistics.",
+          "icon": "Settings"
+        },
+        {
+          "title": "Drone Cargo Specialist",
+          "description": "Specialises in the transportation of goods via drones, optimising payload configurations and delivery routes for efficient logistics operations.",
+          "icon": "Truck"
+        },
+        {
+          "title": "Drone Logistics Strategist",
+          "description": "Plans drone deployment in logistics, optimizing routes, compliance, and efficiency.",
+          "icon": "TrendingUp"
+        },
+        {
+          "title": "Drone Integration Expert",
+          "description": "Integrates drones into logistics systems for compatibility, functionality, and efficiency.",
+          "icon": "Building"
+        }
+      ]
+    }
+  },
+  "supply-chain": {
+    "slug": "supply-chain",
+    "hero": {
+      "title": "Post Graduate Diploma in",
+      "subtitle": "Supply Chain & Logistics Management",
+      "description": "Master the art and science of global supply chain management with our comprehensive program designed for future logistics leaders.",
+      "backgroundImage": "https://images.unsplash.com/photo-1578575437130-527eed3abbec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    },
+    "info": {
+      "summaryImage": "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "droneImage": "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80",
+      "summary": "Advanced training in modern supply chain practices. This program builds expertise in global logistics, procurement strategies, and distribution systems, creating leaders who can optimize complex supply networks.",
+      "details": [
+        {
+          "title": "1 year",
+          "subtitle": "Duration"
+        },
+        {
+          "title": "Hybrid",
+          "subtitle": "Program Type"
+        },
+        {
+          "title": "Open",
+          "subtitle": "Intake"
+        },
+        {
+          "title": "English",
+          "subtitle": "Language"
+        },
+        {
+          "title": "Post Graduate Diploma",
+          "subtitle": "Degree Title"
+        },
+        {
+          "title": "Bachelor's Degree in Any Stream",
+          "subtitle": "Eligibility Criteria"
+        }
+      ]
+    },
+    "about": {
+      "title": "About The Program",
+      "paragraphs": [
+        "The logistics industry is the backbone of global trade, ensuring the seamless movement of goods across supply chains. As businesses expand, the demand for skilled supply chain professionals is growing. To address this need, the School of Skill Education (SSE), Tata Institute of Social Sciences (TISS), in collaboration with the Logistics Sector Skill Council (LSC) and Redington - COLTE, offers a Post Graduate Diploma in Supply Chain & Logistics.",
+        "This program equips students with industry-relevant skills in transportation, warehousing, inventory management, and distribution strategies. Through immersive simulation training and hands-on industry exposure, graduates will be prepared for roles in supply chain management, procurement, and logistics operations. With expert faculty and industry partnerships, this diploma provides a strong foundation for a thriving career in logistics and supply chain management."
+      ],
+      "image": "https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+    },
+    "outcomes": {
+      "title": "Program Outcomes",
+      "description": "Upon completing this program, participants will be able to:",
+      "image": "https://images.unsplash.com/photo-1616432043562-3671ea2e5242?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "items": [
+        "Understand Logistics and Supply Chain Management fundamentals, including sourcing, procurement, conversion, and distribution.",
+        "Apply advanced demand forecasting techniques to anticipate market trends and optimise resources.",
+        "Analyse transportation practices to optimise routes and improve supply chain responsiveness.",
+        "Recognize the impact of supply chain drivers on value chain excellence, leveraging technology and global market dynamics.",
+        "Implement diverse inventory management strategies to minimise costs and enhance efficiency.",
+        "Integrate supply chain strategies to align with organisational goals and enhance competitiveness.",
+        "Develop analytical skills for effective planning and execution of supply chain operations.",
+        "Optimise warehousing systems to streamline operations and reduce handling costs.",
+        "Utilise Information Technology applications for real-time tracking and resource optimization."
+      ]
+    },
+    "curriculum": {
+      "title": "Course Curriculum",
+      "semesters": [
+        {
+          "title": "Semester 1",
+          "courses": [
+            {
+              "no": "01",
+              "course": "Introduction to Logistics & Supply Chain",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "02",
+              "course": "Applied GIS and Spatial Data Analytics",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "03",
+              "course": "Logistic Documentation - International Trade Procedures",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "04",
+              "course": "Optimisation Technique - Distribution Management for Global Supply Chain",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "05",
+              "course": "Data Analytics",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "06",
+              "course": "Strategic Management",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "07",
+              "course": "Project",
+              "hours": 60,
+              "credits": 2
+            },
+            {
+              "no": "08",
+              "course": "Skill Training",
+              "hours": 300,
+              "credits": 10
+            },
+            {
+              "no": "09",
+              "course": "Domain Practicum",
+              "hours": 120,
+              "credits": "NC"
+            }
+          ]
+        },
+        {
+          "title": "Semester 2",
+          "courses": [
+            {
+              "no": "01",
+              "course": "Containerization & Multimodal Transport",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "02",
+              "course": "Inventory Control - Procurement, Storage & Warehouse Management",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "03",
+              "course": "Project Management - Plant Location & Layout",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "04",
+              "course": "Port & Airport Management for Logistics",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "05",
+              "course": "Operation and Supply Green Chain Risk Modelling & Management",
+              "hours": 60,
+              "credits": 4
+            },
+            {
+              "no": "06",
+              "course": "Project",
+              "hours": 60,
+              "credits": 2
+            },
+            {
+              "no": "07",
+              "course": "Skill Training",
+              "hours": 300,
+              "credits": 10
+            },
+            {
+              "no": "08",
+              "course": "Domain Practicum",
+              "hours": 120,
+              "credits": "NC"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "title": "Domain Practicum",
+          "description": "Compulsory and Non-Credit, non-evaluative component"
+        },
+        {
+          "title": "Skill Training",
+          "description": "The Skill Training component is 50% to 60% ranging from 600 hours to 720 hours per year depending upon the industry requirement"
+        }
+      ]
+    },
+    "prospects": {
+      "title": "Career Prospects",
+      "description": "Our graduates gain expertise and skills that prepare them for various roles in the logistics and supply chain industry, including:",
+      "careers": [
+        {
+          "title": "Supply Chain Manager",
+          "description": "Overseeing the entire supply chain process, from procurement to distribution, ensuring efficiency and cost-effectiveness.",
+          "icon": "Network"
+        },
+        {
+          "title": "Logistics Manager",
+          "description": "Managing the transportation, warehousing, and distribution of goods, optimising routes and delivery schedules.",
+          "icon": "Truck"
+        },
+        {
+          "title": "Procurement Manager",
+          "description": "Managing the transportation, warehousing, and distribution of goods, optimising routes and delivery schedules.",
+          "icon": "ShoppingCart"
+        },
+        {
+          "title": "Operations Manager",
+          "description": "Overseeing day-to-day operations within a company's supply chain, ensuring smooth functioning and coordination between different departments.",
+          "icon": "Settings"
+        },
+        {
+          "title": "Inventory Manager",
+          "description": "Managing inventory levels, optimising stock levels to meet demand while minimising excess inventory and holding costs.",
+          "icon": "Package"
+        },
+        {
+          "title": "Distribution Manager",
+          "description": "Managing the distribution network, including warehouses and distribution centres, to ensure timely delivery to customers.",
+          "icon": "Map"
+        },
+        {
+          "title": "Supply Chain Analyst",
+          "description": "Analysing data and trends within the supply chain to identify areas for improvement and cost savings.",
+          "icon": "BarChart"
+        },
+        {
+          "title": "Transportation Manager",
+          "description": "Managing transportation operations, including selecting carriers, negotiating rates, and optimising shipping routes.",
+          "icon": "Navigation"
+        },
+        {
+          "title": "Warehouse Manager",
+          "description": "Overseeing the efficient operation of warehouses, including inventory management, picking, packing, and shipping processes.",
+          "icon": "Building"
+        },
+        {
+          "title": "Consultant",
+          "description": "Providing advisory services to companies on optimising their supply chain processes, improving efficiency, and reducing costs.",
+          "icon": "Lightbulb"
+        },
+        {
+          "title": "Logistics Coordinator",
+          "description": "Coordinating the movement of goods, tracking shipments, and ensuring timely delivery to customers.",
+          "icon": "Compass"
+        },
+        {
+          "title": "Procurement Specialist",
+          "description": "Focusing on specific areas of procurement, such as strategic sourcing, supplier relationship management, or contract negotiation.",
+          "icon": "Search"
+        },
+        {
+          "title": "Quality Assurance Manager",
+          "description": "Ensuring that products meet quality standards throughout the supply chain, implementing quality control measures and conducting audits.",
+          "icon": "ShieldCheck"
+        },
+        {
+          "title": "Supply Chain Planner",
+          "description": "Forecasting demand, planning production schedules, and coordinating with suppliers to ensure the availability of materials.",
+          "icon": "TrendingUp"
+        },
+        {
+          "title": "Sustainability Manager",
+          "description": "Developing and implementing sustainable practices within the supply chain, such as reducing carbon emissions and minimising waste.",
+          "icon": "Leaf"
+        }
+      ]
+    }
+  },
+  "data-science": {
+    "slug": "data-science",
+    "hero": {
+      "title": "Post Graduate Diploma in",
+      "subtitle": "Data Science for Logistics",
+      "description": "Transform logistics operations with data-driven insights through our specialized program combining analytics and supply chain expertise.",
+      "backgroundImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    },
+    "info": {
+      "summaryImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80",
+      "droneImage": "https://images.pexels.com/photos/3057960/pexels-photo-3057960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "summary": "Specialized training in applying data science to logistics challenges. This program equips students with analytical skills to optimize supply chains through predictive modeling, machine learning, and big data technologies.",
+      "details": [
+        {
+          "title": "1 year",
+          "subtitle": "Duration"
+        },
+        {
+          "title": "Hybrid",
+          "subtitle": "Program Type"
+        },
+        {
+          "title": "Open",
+          "subtitle": "Intake"
+        },
+        {
+          "title": "English",
+          "subtitle": "Language"
+        },
+        {
+          "title": "Post Graduate Diploma",
+          "subtitle": "Degree Title"
+        },
+        {
+          "title": "Bachelor's Degree in Any Stream",
+          "subtitle": "Eligibility Criteria"
+        }
+      ]
+    },
+    "about": {
+      "title": "About The Program",
+      "paragraphs": [
+        "With the rapid digital transformation of logistics, data-driven decision-making is reshaping supply chain management, demand forecasting, and operational efficiency. Recognizing this industry shift, the School of Skill Education (SSE), Tata Institute of Social Sciences (TISS), in collaboration with LSC and Redington - COLTE, introduces the Post Graduate Diploma in Data Science for Logistics.",
+        "The Post Graduate Diploma in Data Science for Logistics integrates data analytics, artificial intelligence, and machine learning to enhance logistics efficiency and decision-making. This program is tailored for individuals looking to master big data analytics, predictive modeling, and AI-driven logistics optimization. Through a combination of simulation-based training and real-world applications, students will gain the analytical skills required to reduce costs, improve supply chain efficiency, and mitigate risks. This diploma prepares graduates for roles in logistics analytics, digital supply chain management, and AI-powered logistics solutions."
+      ],
+      "image": "https://images.unsplash.com/photo-1599658880436-c61792e70672?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+    },
+    "outcomes": {
+      "title": "Program Outcomes",
+      "description": "Upon completing this program, participants will be able to:",
+      "image": "https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "items": [
+        "Enhance port and airport efficiency with real-time monitoring and predictive maintenance to reduce delays.",
+        "Optimize inventory, procurement, and warehouse management with data-driven methods for optimal stock levels and allocation.",
+        "Master machine learning concepts for demand forecasting and anomaly detection in logistics operations.",
+        "Utilise data analytics for project management to improve timelines and outcomes.",
+        "Apply advanced demand forecasting techniques to anticipate market trends and optimise resources.",
+        "Develop data-driven risk models for green supply chains to ensure sustainability and resilience.",
+        "Explore blockchain applications for logistics to improve transparency and security.",
+        "Use IoT data for real-time monitoring and optimization, enhancing visibility and efficiency.",
+        "Analyse data to optimise revenue and distribution, maximising profitability and market reach."
+      ]
+    },
+    "curriculum": {
+      "title": "Course Curriculum",
+      "semesters": [
+        {
+          "title": "Semester 1",
+          "courses": [
+            {
+              "no": "01",
+              "course": "Supply chain management",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "02",
+              "course": "Data Analytics and Statistics",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "03",
+              "course": "Inventory control",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "04",
+              "course": "Fundamental of Logistics",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "05",
+              "course": "Optimisation Technique 1",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "06",
+              "course": "Plant location and Layout",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "07",
+              "course": "Project",
+              "hours": 60,
+              "credits": 2
+            },
+            {
+              "no": "08",
+              "course": "Skill Training",
+              "hours": 300,
+              "credits": 10
+            },
+            {
+              "no": "09",
+              "course": "Domain Practicum",
+              "hours": 120,
+              "credits": "NC"
+            }
+          ]
+        },
+        {
+          "title": "Semester 2",
+          "courses": [
+            {
+              "no": "01",
+              "course": "Supply Chain Applications of Block Chain",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "02",
+              "course": "Concept and Applications of Internet of Things",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "03",
+              "course": "Logistic Documentation",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "04",
+              "course": "Advanced Logistics",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "05",
+              "course": "Machine Learning concepts",
+              "hours": 60,
+              "credits": 4
+            },
+            {
+              "no": "06",
+              "course": "Revenue and Distribution Management",
+              "hours": 30,
+              "credits": 2
+            },
+            {
+              "no": "07",
+              "course": "Project",
+              "hours": 60,
+              "credits": 2
+            },
+            {
+              "no": "08",
+              "course": "Skill Training",
+              "hours": 300,
+              "credits": 10
+            },
+            {
+              "no": "09",
+              "course": "Domain Practicum",
+              "hours": 120,
+              "credits": "NC"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "title": "Domain Practicum",
+          "description": "Compulsory and Non-Credit, non-evaluative component"
+        },
+        {
+          "title": "Skill Training",
+          "description": "The Skill Training component is 50% to 60% ranging from 600 hours to 720 hours per year depending upon the industry requirement"
+        }
+      ]
+    },
+    "prospects": {
+      "title": "Career Prospects",
+      "description": "Our graduates gain expertise and skills that prepare them for various roles at the intersection of data science and logistics, including:",
+      "careers": [
+        {
+          "title": "Project Manager",
+          "description": "Leads logistics projects using data-driven insights.",
+          "icon": "FolderKanban"
+        },
+        {
+          "title": "Quality Assurance Analyst",
+          "description": "Utilises data analytics to ensure product quality and compliance with industry standards throughout the supply chain.",
+          "icon": "ShieldCheck"
+        },
+        {
+          "title": "Operations Analyst",
+          "description": "Improves port and airport operations efficiency.",
+          "icon": "BarChart3"
+        },
+        {
+          "title": "Compliance Manager",
+          "description": "Ensures regulatory compliance and industry standards, using data analytics to monitor and enforce logistics processes.",
+          "icon": "FileCheck"
+        },
+        {
+          "title": "Sustainability Specialist",
+          "description": "Utilises data analytics to ensure product quality and compliance with industry standards throughout the supply chain.",
+          "icon": "Leaf"
+        },
+        {
+          "title": "Global Compliance Lead",
+          "description": "Ensures compliance with International trade regulations, manages risks, and streamlines cross-border logistics using data analytics.",
+          "icon": "Globe"
+        },
+        {
+          "title": "Blockchain Logistics Expert",
+          "description": "Implements blockchain for transparency and security.",
+          "icon": "Link"
+        },
+        {
+          "title": "Forecasting Analyst",
+          "description": "Uses predictive modeling to forecast demand, inventory, and transportation needs, optimizing resources and reducing stockouts.",
+          "icon": "TrendingUp"
+        },
+        {
+          "title": "IoT Analyst",
+          "description": "Monitors and optimises logistics processes in real-time.",
+          "icon": "Wifi"
+        },
+        {
+          "title": "Vendor Relations Manager",
+          "description": "Manages supplier relationships, analyzes performance data, negotiates contracts, and optimizes procurement for cost and efficiency.",
+          "icon": "Handshake"
+        },
+        {
+          "title": "Documentation Specialist",
+          "description": "Streamlines logistic documentation processes.",
+          "icon": "FileText"
+        },
+        {
+          "title": "CX Manager",
+          "description": "Customer Experience Manager analyzes data to enhance satisfaction, loyalty, and optimize deliveries with personalized services.",
+          "icon": "Users"
+        },
+        {
+          "title": "Supply Chain Manager",
+          "description": "Optimises supply chain networks and decision-making.",
+          "icon": "Network"
+        },
+        {
+          "title": "Data Analyst",
+          "description": "Analyses transportation data and optimises supply chain efficiency.",
+          "icon": "AreaChart"
+        },
+        {
+          "title": "Machine Learning Engineer",
+          "description": "Develops AI solutions for logistics optimisation.",
+          "icon": "Brain"
+        },
+        {
+          "title": "Revenue Manager",
+          "description": "Analyse data to optimise revenue and distribution strategies.",
+          "icon": "DollarSign"
+        },
+        {
+          "title": "Supply Chain Analyst",
+          "description": "Optimises inventory management and procurement processes.",
+          "icon": "LineChart"
+        }
+      ]
+    }
+  }
+}
