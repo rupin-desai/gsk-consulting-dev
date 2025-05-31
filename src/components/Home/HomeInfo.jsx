@@ -103,7 +103,7 @@ const HomeInfo = () => {
 
   return (
     <section
-      className="py-16 relative overflow-hidden bg-gradient-to-r from-indigo-50 via-white to-teal-50"
+      className="py-12 sm:py-16 relative overflow-hidden bg-gradient-to-r from-indigo-50 via-white to-teal-50"
       ref={ref}
       style={{
         perspective: 1000,
@@ -111,26 +111,24 @@ const HomeInfo = () => {
       }}
     >
       {/* Decorative elements */}
-      
-
       <motion.div
-        className="absolute top-1/4 left-10 w-16 h-16 bg-gradient-to-r from-teal-100/40 to-indigo-100/40 rounded-full pointer-events-none"
+        className="absolute top-1/4 left-4 sm:left-10 w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-r from-teal-100/40 to-indigo-100/40 rounded-full pointer-events-none"
         variants={decorationVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         style={{ willChange: "transform, opacity" }}
       ></motion.div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <motion.div
-          className="max-w-4xl mx-auto text-center"
+          className="max-w-4xl mx-auto text-center px-2 sm:px-0"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
           {/* Title */}
           <motion.h2
-            className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 relative"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4 sm:mb-6 relative"
             variants={titleVariants}
             style={{ willChange: "transform, opacity" }}
           >
@@ -139,7 +137,7 @@ const HomeInfo = () => {
 
           {/* Content */}
           <motion.p
-            className="text-gray-600 mb-8 text-lg leading-relaxed"
+            className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed"
             variants={contentVariants}
             style={{ willChange: "transform, opacity" }}
           >
@@ -155,7 +153,7 @@ const HomeInfo = () => {
           >
             <Button
               color="gradient"
-              className="px-8 py-3 text-lg"
+              className="px-6 py-2.5 sm:px-8 sm:py-3 text-base sm:text-lg"
               onClick={scrollToContact}
             >
               Get in Touch Today

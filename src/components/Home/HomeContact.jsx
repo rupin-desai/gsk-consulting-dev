@@ -46,7 +46,7 @@ const HomeContact = () => {
   return (
     <section
       id="home-contact-section"
-      className="py-16 md:px-16 bg-gray-50 relative overflow-hidden"
+      className="py-12 sm:py-16 px-4 sm:px-8 md:px-16 bg-gray-50 relative overflow-hidden"
       ref={sectionRef}
       style={{
         perspective: 1000,
@@ -55,7 +55,7 @@ const HomeContact = () => {
     >
       {/* Simple background gradient */}
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           {/* Left-aligned title */}
           <motion.div
@@ -66,15 +66,15 @@ const HomeContact = () => {
             animate={isContentInView ? "visible" : "hidden"}
             style={{ willChange: "transform, opacity" }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-3 sm:mb-4">
               Get In Touch
             </h2>
-            <div className="w-60 h-1 ml-2 bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 mb-6"></div>
-            <p className="text-gray-600 text-lg mb-4">
+            <div className="w-32 sm:w-60 h-1 ml-1 sm:ml-2 bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 mb-4 sm:mb-6"></div>
+            <p className="text-base sm:text-lg text-gray-600 mb-3 sm:mb-4">
               Have a question or ready to explore how we can help? Reach out to
               our team.
             </p>
-            <p className="text-gray-600">
+            <p className="text-sm sm:text-base text-gray-600">
               Fill out the form and we'll get back to you within 24 hours.
             </p>
           </motion.div>

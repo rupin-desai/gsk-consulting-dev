@@ -118,7 +118,7 @@ const HomeStats = () => {
     <section
       id="home-stats-section" // Added ID for scroll target
       ref={ref}
-      className="pt-24 pb-4 bg-gray-50"
+      className="py-12 sm:py-16 md:pt-24 pb-4 bg-gray-50"
       style={{
         transform: "translate3d(0, 0, 0)",
         backfaceVisibility: "hidden",
@@ -126,7 +126,7 @@ const HomeStats = () => {
       }}
     >
       <div
-        className="container mx-auto px-4"
+        className="container mx-auto px-4 md:px-6"
         style={{
           transform: "translate3d(0, 0, 0)",
           backfaceVisibility: "hidden",
@@ -134,7 +134,7 @@ const HomeStats = () => {
       >
         {/* Stats Row - Compact Layout but slightly bigger */}
         <div
-          className="flex flex-wrap md:flex-nowrap justify-center items-center"
+          className="flex flex-wrap justify-center items-center"
           style={{
             transform: "translate3d(0, 0, 0)",
             backfaceVisibility: "hidden",
@@ -144,7 +144,7 @@ const HomeStats = () => {
             <React.Fragment key={index}>
               {/* Stat Item */}
               <motion.div
-                className="text-center px-4 py-5 md:py-3 md:px-6 w-1/2 md:w-auto"
+                className="text-center px-2 sm:px-4 py-3 md:py-3 md:px-6 w-1/2 sm:w-auto"
                 variants={statItemVariants}
                 initial="initial"
                 animate={isInView ? "animate" : "initial"}
@@ -158,7 +158,7 @@ const HomeStats = () => {
                 <div className="flex flex-col md:flex-row items-center">
                   {/* Icon with circular background */}
                   <motion.div
-                    className={`w-14 h-14 mb-3 md:mb-0 md:mr-4 bg-gradient-to-r from-indigo-100 to-sky-100 rounded-full flex items-center justify-center ${iconColors[index]}`}
+                    className={`w-12 h-12 sm:w-14 sm:h-14 mb-3 md:mb-0 md:mr-4 bg-gradient-to-r from-indigo-100 to-sky-100 rounded-full flex items-center justify-center ${iconColors[index]}`}
                     variants={iconVariants}
                     initial="initial"
                     animate={isInView ? "animate" : "initial"}
@@ -175,7 +175,7 @@ const HomeStats = () => {
                   <div className="md:text-left">
                     {/* Count number */}
                     <motion.div
-                      className="text-3xl md:text-6xl font-medium text-gray-800 flex items-end justify-center md:justify-start"
+                      className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-medium text-gray-800 flex items-end justify-center md:justify-start"
                       variants={countVariants}
                       initial="initial"
                       animate={isInView ? "animate" : "initial"}
@@ -200,8 +200,8 @@ const HomeStats = () => {
                       </span>
                     </motion.div>
 
-                    {/* Stat label - hidden on smaller screens to save space */}
-                    <h3 className="text-sm md:text-base font-medium text-gray-600 mt-1 hidden md:block">
+                    {/* Stat label - now visible on all screens but smaller on mobile */}
+                    <h3 className="text-xs sm:text-sm md:text-base font-medium text-gray-600 mt-1">
                       {stat.label}
                     </h3>
                   </div>

@@ -56,25 +56,25 @@ const HomeAbout = () => {
     {
       title: "Excellence",
       description: "Delivering the highest quality in all we do",
-      icon: <Target size={22} />,
+      icon: <Target size={18} className="sm:w-[22px] sm:h-[22px]" />,
       color: "from-indigo-600 to-sky-600",
     },
     {
       title: "Collaboration",
       description: "Working as true partners with our clients",
-      icon: <Users size={22} />,
+      icon: <Users size={18} className="sm:w-[22px] sm:h-[22px]" />,
       color: "from-sky-600 to-teal-600",
     },
     {
       title: "Integrity",
       description: "Upholding the highest ethical standards",
-      icon: <Award size={22} />,
+      icon: <Award size={18} className="sm:w-[22px] sm:h-[22px]" />,
       color: "from-teal-600 to-indigo-600",
     },
     {
       title: "Innovation",
       description: "Creating solutions for complex challenges",
-      icon: <Briefcase size={22} />,
+      icon: <Briefcase size={18} className="sm:w-[22px] sm:h-[22px]" />,
       color: "from-indigo-600 to-teal-600",
     },
   ];
@@ -82,7 +82,7 @@ const HomeAbout = () => {
   return (
     <section
       id="home-about-section"
-      className="py-16 md:px-24 relative overflow-hidden bg-gray-50"
+      className="py-12 sm:py-16 px-4 sm:px-8 md:px-16 lg:px-24 relative overflow-hidden bg-gray-50"
       ref={sectionRef}
       style={{
         perspective: 1000,
@@ -92,40 +92,40 @@ const HomeAbout = () => {
       {/* Background elements */}
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-r from-teal-50 to-transparent -z-10"></div>
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         {/* Section header */}
         <motion.div
           ref={headerRef}
-          className="text-center max-w-3xl mx-auto mb-12"
+          className="text-center max-w-3xl mx-auto mb-8 sm:mb-12"
           variants={itemVariants}
           initial="hidden"
           animate={isHeaderInView ? "visible" : "hidden"}
           style={{ willChange: "transform, opacity" }}
         >
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">
             About GSK Consultants
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 mx-auto mb-6"></div>
+          <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-600 mx-auto mb-4 sm:mb-6"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 items-center">
           {/* Left column - company info */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {/* Company overview - reduced content, larger text */}
             <motion.div
               ref={storyRef}
               variants={itemVariants}
               initial="hidden"
               animate={isStoryInView ? "visible" : "hidden"}
-              className="space-y-4"
+              className="space-y-3 sm:space-y-4"
               style={{ willChange: "transform, opacity" }}
             >
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
                 GSK Consultants is a premier consulting firm helping businesses
                 navigate challenges and seize opportunities. Our expert team
                 brings decades of experience to every project.
               </p>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
                 Founded in 2013, we've grown to serve clients across India and
                 internationally with innovative solutions that deliver
                 measurable results.
@@ -141,34 +141,37 @@ const HomeAbout = () => {
               className="space-y-4"
               style={{ willChange: "transform, opacity" }}
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mt-2">
                 {values.map((value, index) => (
                   <div key={index} className="flex items-start">
-                    <div className="flex-shrink-0 mr-3">
+                    <div className="flex-shrink-0 mr-2 sm:mr-3">
                       <div
-                        className={`w-12 h-12 rounded-full bg-gradient-to-r ${value.color} flex items-center justify-center text-white`}
+                        className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-r ${value.color} flex items-center justify-center text-white`}
                       >
                         {value.icon}
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-medium text-gray-800 text-lg">
+                      <h4 className="font-medium text-gray-800 text-base sm:text-lg">
                         {value.title}
                       </h4>
-                      <p className="text-gray-600">{value.description}</p>
+                      <p className="text-gray-600 text-sm sm:text-base">
+                        {value.description}
+                      </p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="pt-6">
+              <div className="pt-4 sm:pt-6">
                 <Button
                   scrollToId="#homewhy"
                   color="gradient"
                   variant="primary"
-                  className="flex items-center text-base"
+                  className="flex items-center text-sm sm:text-base px-4 py-2 sm:px-5 sm:py-2.5"
                 >
-                  Learn More <ChevronRight className="ml-1 h-5 w-5" />
+                  Learn More{" "}
+                  <ChevronRight className="ml-1 h-4 w-4 sm:h-5 sm:w-5" />
                 </Button>
               </div>
             </motion.div>
@@ -180,7 +183,7 @@ const HomeAbout = () => {
             variants={imageVariants}
             initial="hidden"
             animate={isImageInView ? "visible" : "hidden"}
-            className="relative"
+            className="relative mt-6 lg:mt-0"
             style={{ willChange: "transform, opacity" }}
           >
             <div className="rounded-lg overflow-hidden shadow-lg relative">
@@ -194,16 +197,16 @@ const HomeAbout = () => {
             </div>
 
             {/* Decorative elements */}
-            <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-indigo-200 rounded-lg -z-10"></div>
-            <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-r from-indigo-100 to-sky-100 rounded-lg -z-10"></div>
+            <div className="absolute -bottom-3 sm:-bottom-4 -right-3 sm:-right-4 w-full h-full border-2 border-indigo-200 rounded-lg -z-10"></div>
+            <div className="absolute -top-3 sm:-top-4 -left-3 sm:-left-4 w-16 h-16 sm:w-24 sm:h-24 bg-gradient-to-r from-indigo-100 to-sky-100 rounded-lg -z-10"></div>
 
             {/* Quote overlay - simplified */}
-            <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-md">
-              <p className="text-gray-700 text-base italic">
+            <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 bg-white/90 backdrop-blur-sm p-3 sm:p-4 rounded-lg shadow-md">
+              <p className="text-gray-700 text-sm sm:text-base italic">
                 "Empowering businesses with strategic insights and operational
                 excellence to thrive in today's competitive landscape."
               </p>
-              <p className="text-right text-indigo-600 font-medium text-base mt-2">
+              <p className="text-right text-indigo-600 font-medium text-sm sm:text-base mt-1 sm:mt-2">
                 — Founder & CEO
               </p>
             </div>

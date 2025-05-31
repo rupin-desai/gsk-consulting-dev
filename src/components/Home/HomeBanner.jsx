@@ -174,7 +174,7 @@ const HomeBanner = () => {
 
   return (
     <section
-      className="relative z-10 py-24 bg-gray-50 overflow-hidden"
+      className="relative z-10 py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-50 overflow-hidden"
       style={{
         perspective: 1000,
         backfaceVisibility: "hidden",
@@ -182,16 +182,16 @@ const HomeBanner = () => {
       ref={bannerRef}
     >
       <div
-        className="container mx-auto px-4"
+        className="container mx-auto px-4 sm:px-6 lg:px-8"
         style={{
           transformStyle: "preserve-3d",
           willChange: "transform, opacity",
         }}
       >
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
             {/* Content Column */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6 order-2 md:order-1">
               <motion.div
                 ref={headingRef}
                 className="space-y-2"
@@ -203,10 +203,10 @@ const HomeBanner = () => {
                   willChange: "transform, opacity",
                 }}
               >
-                <span className="px-4 py-1.5 bg-gradient-to-r from-indigo-600/10 via-sky-600/10 to-teal-600/10 text-indigo-700 font-medium rounded-full text-sm inline-block">
+                <span className="px-3 sm:px-4 py-1 sm:py-1.5 bg-gradient-to-r from-indigo-600/10 via-sky-600/10 to-teal-600/10 text-indigo-700 font-medium rounded-full text-xs sm:text-sm inline-block">
                   Premier Consulting Services
                 </span>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
                   Transform Your Business with Strategic Expertise
                 </h2>
               </motion.div>
@@ -216,7 +216,7 @@ const HomeBanner = () => {
                 variants={itemVariants}
                 initial="hidden"
                 animate={isDescriptionInView ? "visible" : "hidden"}
-                className="text-gray-600 text-lg leading-relaxed"
+                className="text-gray-600 text-base sm:text-lg leading-relaxed"
                 style={{
                   transformStyle: "preserve-3d",
                   willChange: "transform, opacity",
@@ -230,7 +230,7 @@ const HomeBanner = () => {
               {/* Feature List */}
               <motion.div
                 ref={featuresRef}
-                className="space-y-3 mt-6"
+                className="space-y-3 mt-2 sm:mt-4"
                 initial="hidden"
                 animate={isFeaturesInView ? "visible" : "hidden"}
                 style={{
@@ -253,9 +253,11 @@ const HomeBanner = () => {
                       }}
                     >
                       <CheckCircle
-                        className={`h-5 w-5 mt-1 mr-3 flex-shrink-0 ${feature.color}`}
+                        className={`h-4 w-4 sm:h-5 sm:w-5 mt-1 mr-2 sm:mr-3 flex-shrink-0 ${feature.color}`}
                       />
-                      <p className="text-gray-700">{feature.text}</p>
+                      <p className="text-sm sm:text-base text-gray-700">
+                        {feature.text}
+                      </p>
                     </motion.div>
                   ))}
                 </AnimatePresence>
@@ -264,7 +266,7 @@ const HomeBanner = () => {
               {/* CTA Buttons */}
               <motion.div
                 ref={ctaRef}
-                className="flex flex-col sm:flex-row gap-4 pt-4"
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4"
                 variants={itemVariants}
                 initial="hidden"
                 animate={isCtaInView ? "visible" : "hidden"}
@@ -275,7 +277,7 @@ const HomeBanner = () => {
               >
                 <Button
                   color="gradient"
-                  className="flex items-center"
+                  className="flex items-center justify-center"
                   onClick={scrollToContact}
                 >
                   Schedule a Consultation{" "}
@@ -284,6 +286,7 @@ const HomeBanner = () => {
                 <Button
                   variant="outline"
                   color="gradient"
+                  className="justify-center"
                   onClick={scrollToNextSection}
                 >
                   Learn More
@@ -293,7 +296,7 @@ const HomeBanner = () => {
               {/* Trust Indicators */}
               <motion.div
                 ref={trustRef}
-                className="flex items-center pt-6"
+                className="flex flex-col sm:flex-row sm:items-center pt-2 sm:pt-4 gap-3 sm:gap-0"
                 variants={itemVariants}
                 initial="hidden"
                 animate={isTrustInView ? "visible" : "hidden"}
@@ -310,20 +313,20 @@ const HomeBanner = () => {
                         20 + i
                       }.jpg`}
                       alt="Client"
-                      className="w-10 h-10 rounded-full border-2 border-white"
+                      className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white"
                     />
                   ))}
                 </div>
-                <div className="ml-4">
+                <div className="sm:ml-4">
                   <div className="flex items-center">
                     {[1, 2, 3, 4, 5].map((i) => (
                       <Star
                         key={i}
-                        className="h-4 w-4 fill-current text-yellow-500"
+                        className="h-3 w-3 sm:h-4 sm:w-4 fill-current text-yellow-500"
                       />
                     ))}
                   </div>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-xs sm:text-sm text-gray-600">
                     Trusted by 200+ businesses worldwide
                   </p>
                 </div>
@@ -333,7 +336,7 @@ const HomeBanner = () => {
             {/* Image Column with decorative elements */}
             <motion.div
               ref={imageRef}
-              className="relative"
+              className="relative mx-auto max-w-sm sm:max-w-md md:max-w-none order-1 md:order-2"
               variants={imageVariants}
               initial="hidden"
               animate={isImageInView ? "visible" : "hidden"}
@@ -356,7 +359,7 @@ const HomeBanner = () => {
 
               {/* Decorative elements */}
               <motion.div
-                className="absolute -bottom-5 -right-5 w-full h-full border-2 border-indigo-200 rounded-lg -z-10"
+                className="absolute -bottom-3 sm:-bottom-5 -right-3 sm:-right-5 w-full h-full border-2 border-indigo-200 rounded-lg -z-10"
                 variants={decorVariants}
                 initial="hidden"
                 animate={isImageInView ? "visible" : "hidden"}
@@ -367,7 +370,7 @@ const HomeBanner = () => {
               ></motion.div>
 
               <motion.div
-                className="absolute -top-5 -left-5 w-24 h-24 bg-gradient-to-r from-indigo-100 to-sky-100 rounded-lg -z-10"
+                className="absolute -top-3 sm:-top-5 -left-3 sm:-left-5 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-r from-indigo-100 to-sky-100 rounded-lg -z-10"
                 variants={decorVariants}
                 initial="hidden"
                 animate={isImageInView ? "visible" : "hidden"}
@@ -379,7 +382,7 @@ const HomeBanner = () => {
 
               {/* Floating stats card */}
               <motion.div
-                className="absolute -bottom-10 -left-10 md:left-10 bg-white shadow-xl rounded-lg p-4 z-20 max-w-[200px]"
+                className="absolute -bottom-6 sm:-bottom-10 left-0 sm:-left-6 md:left-10 bg-white shadow-xl rounded-lg p-3 sm:p-4 z-20 max-w-[160px] sm:max-w-[200px]"
                 variants={statsCardVariants}
                 initial="hidden"
                 animate={isImageInView ? "visible" : "hidden"}
@@ -388,8 +391,10 @@ const HomeBanner = () => {
                   willChange: "transform, opacity",
                 }}
               >
-                <div className="text-indigo-600 font-bold text-3xl">95%</div>
-                <div className="text-gray-700 text-sm">
+                <div className="text-indigo-600 font-bold text-2xl sm:text-3xl">
+                  95%
+                </div>
+                <div className="text-gray-700 text-xs sm:text-sm">
                   Client satisfaction rate on projects delivered on time
                 </div>
               </motion.div>
