@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-const InterAbout = ({ data }) => {
+const ServicesAbout = ({ data }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
@@ -43,19 +43,6 @@ const InterAbout = ({ data }) => {
     },
   };
 
-  const numberVariants = {
-    hidden: { opacity: 0, transform: "translateY(-20px)" },
-    visible: {
-      opacity: 0.5,
-      transform: "translateY(0)",
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 15,
-      },
-    },
-  };
-
   return (
     <section
       ref={ref}
@@ -67,28 +54,22 @@ const InterAbout = ({ data }) => {
         animate={isInView ? "visible" : "hidden"}
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left content - Text - Added text-center for mobile */}
+          {/* Left content - Text */}
           <motion.div
             className="space-y-0 text-center lg:text-left"
             variants={textVariants}
           >
-            {/* Group title and underline with reduced spacing - centered on mobile */}
+            {/* Title and underline */}
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
                 {data.title}
               </h2>
               {/* Centered underline on mobile */}
-              <div className="w-20 h-1 bg-[#00B5CA] mt-2 mx-auto lg:mx-0"></div>
+              <div className="w-20 h-1 bg-[#e6b400] mt-2 mx-auto lg:mx-0"></div>
             </div>
 
             {data.paragraphs.map((paragraph, index) => (
               <div key={index} className="relative mt-10">
-                {/* <motion.span
-                  className="absolute -left-3 lg:-left-3 -top-10 text-8xl font-bold text-[#00B5CA]"
-                  variants={numberVariants}
-                >
-                  {index + 1}
-                </motion.span> */}
                 <p className="relative pl-2 lg:pl-2 px-4 md:px-6 lg:px-0 text-gray-600 leading-relaxed">
                   {paragraph}
                 </p>
@@ -101,13 +82,13 @@ const InterAbout = ({ data }) => {
             <div className="relative z-10">
               <img
                 src={data.image}
-                alt="Drone and logistics operations"
+                alt="Business consulting services"
                 className="rounded-lg shadow-lg w-full h-full object-cover"
               />
             </div>
 
             {/* Decorative element */}
-            <div className="absolute -bottom-6 -right-6 w-3/4 h-3/4 rounded-lg border-4 border-[#00B5CA]/20 -z-10"></div>
+            <div className="absolute -bottom-6 -right-6 w-3/4 h-3/4 rounded-lg border-4 border-[#e6b400]/20 -z-10"></div>
           </motion.div>
         </div>
       </motion.div>
@@ -115,4 +96,4 @@ const InterAbout = ({ data }) => {
   );
 };
 
-export default InterAbout;
+export default ServicesAbout;

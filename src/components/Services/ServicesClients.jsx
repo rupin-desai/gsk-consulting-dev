@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import * as LucideIcons from "lucide-react";
 
-const InterProspects = ({ data }) => {
+const ServicesClients = ({ data }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.05 });
 
@@ -54,7 +54,7 @@ const InterProspects = ({ data }) => {
         // Set timeout to move to the next card
         timeoutRef.current = setTimeout(() => {
           // Move to the next card or back to the beginning
-          const nextIndex = (activeCardIndex + 1) % data.careers.length;
+          const nextIndex = (activeCardIndex + 1) % data.industries.length;
           setActiveCardIndex(nextIndex);
         }, 2000); // Change cards every 2 seconds
       }
@@ -64,7 +64,7 @@ const InterProspects = ({ data }) => {
     }
 
     return cleanup;
-  }, [isInView, activeCardIndex, autoTriggerEnabled, data.careers.length]);
+  }, [isInView, activeCardIndex, autoTriggerEnabled, data.industries.length]);
 
   // Handle user interaction
   useEffect(() => {
@@ -119,7 +119,7 @@ const InterProspects = ({ data }) => {
 
   return (
     <section
-      id="career-prospects"
+      id="client-industries"
       ref={ref}
       className="py-16 md:py-24 px-4 bg-white overflow-hidden"
     >
@@ -134,18 +134,18 @@ const InterProspects = ({ data }) => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               {data.title}
             </h2>
-            <div className="w-24 h-1 bg-[#00B5CA] mx-auto mb-6"></div>
+            <div className="w-24 h-1 bg-[#e6b400] mx-auto mb-6"></div>
             <p className="text-gray-600 max-w-3xl mx-auto">
               {data.description}
             </p>
           </motion.div>
 
-          {/* Prospects Grid with properly centered cards */}
+          {/* Industries Grid with properly centered cards */}
           <div className="flex flex-wrap justify-center gap-6">
-            {data.careers.map((career, index) => {
+            {data.industries.map((industry, index) => {
               // Dynamically get the icon component from Lucide
               const IconComponent =
-                LucideIcons[career.icon] || LucideIcons.Briefcase;
+                LucideIcons[industry.icon] || LucideIcons.Briefcase;
 
               return (
                 <motion.div
@@ -169,17 +169,17 @@ const InterProspects = ({ data }) => {
                 >
                   {/* Card content with icon */}
                   <div className="p-6 h-full flex flex-col justify-center items-center text-center">
-                    <div className="text-[#00B5CA] mb-3 flex justify-center">
+                    <div className="text-[#e6b400] mb-3 flex justify-center">
                       <IconComponent size={36} />
                     </div>
                     <h3 className="text-xl font-bold text-gray-800">
-                      {career.title}
+                      {industry.title}
                     </h3>
                   </div>
 
                   {/* Curtain overlay - modified to handle tap vs hover */}
                   <div
-                    className={`absolute inset-0 flex items-center justify-center p-6 bg-gradient-to-r from-[#00B5CA] to-[#007a8a] text-white transform transition-transform duration-300 ease-in-out ${
+                    className={`absolute inset-0 flex items-center justify-center p-6 bg-gradient-to-r from-[#e6b400] to-[#c99c00] text-white transform transition-transform duration-300 ease-in-out ${
                       (isTouchDevice && tappedCardIndex === index) ||
                       (!isTouchDevice &&
                         (activeCardIndex === index && !userInteracted
@@ -192,8 +192,10 @@ const InterProspects = ({ data }) => {
                       <div className="text-white mb-3 flex justify-center">
                         <IconComponent size={36} />
                       </div>
-                      <h3 className="text-xl font-bold mb-2">{career.title}</h3>
-                      <p className="text-sm">{career.description}</p>
+                      <h3 className="text-xl font-bold mb-2">
+                        {industry.title}
+                      </h3>
+                      <p className="text-sm">{industry.description}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -206,4 +208,4 @@ const InterProspects = ({ data }) => {
   );
 };
 
-export default InterProspects;
+export default ServicesClients;

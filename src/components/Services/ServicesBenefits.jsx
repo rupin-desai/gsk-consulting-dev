@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 
-const InterOutcomes = ({ data }) => {
+const ServicesBenefits = ({ data }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
@@ -70,41 +70,41 @@ const InterOutcomes = ({ data }) => {
             <div className="relative z-10">
               <img
                 src={data.image}
-                alt="Supply chain logistics operations"
+                alt="Business consulting benefits"
                 className="w-full h-full object-cover rounded-t-[300px] rounded-b-xl shadow-lg"
               />
             </div>
 
             {/* Decorative circle */}
-            <div className="absolute -bottom-8 -left-8 w-40 h-40 rounded-full border-4 border-[#00B5CA]/20 -z-10"></div>
+            <div className="absolute -bottom-8 -left-8 w-40 h-40 rounded-full border-4 border-[#e6b400]/20 -z-10"></div>
 
             {/* Additional small decorative circles */}
-            <div className="absolute top-1/4 -right-6 w-12 h-12 rounded-full bg-[#00B5CA]/10 -z-10"></div>
-            <div className="absolute top-3/4 -left-4 w-8 h-8 rounded-full bg-[#00B5CA]/20 -z-10"></div>
+            <div className="absolute top-1/4 -right-6 w-12 h-12 rounded-full bg-[#e6b400]/10 -z-10"></div>
+            <div className="absolute top-3/4 -left-4 w-8 h-8 rounded-full bg-[#e6b400]/20 -z-10"></div>
           </motion.div>
 
-          {/* Right: Outcomes list */}
+          {/* Right: Benefits list */}
           <div className="lg:w-3/5">
             <motion.div variants={titleVariants} className="mb-10">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
                 {data.title}
               </h2>
-              <div className="w-20 h-1 bg-[#00B5CA]"></div>
+              <div className="w-20 h-1 bg-[#e6b400]"></div>
               <p className="mt-4 text-xl text-gray-600">{data.description}</p>
             </motion.div>
 
             <motion.ul className="space-y-4">
-              {data.items.map((outcome, index) => (
+              {data.items.map((benefit, index) => (
                 <motion.li
                   key={index}
                   className="flex items-start"
                   variants={itemVariants}
                 >
                   <CheckCircle
-                    className="text-[#00B5CA] mr-3 min-w-[20px] mt-0.5"
+                    className="text-[#e6b400] mr-3 min-w-[20px] mt-0.5"
                     size={20}
                   />
-                  <span className="text-gray-700">{outcome}</span>
+                  <span className="text-gray-700">{benefit}</span>
                 </motion.li>
               ))}
             </motion.ul>
@@ -115,4 +115,4 @@ const InterOutcomes = ({ data }) => {
   );
 };
 
-export default InterOutcomes;
+export default ServicesBenefits;

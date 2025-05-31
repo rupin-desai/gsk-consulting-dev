@@ -3,12 +3,12 @@ import { NavLink, Link, useLocation } from "react-router-dom";
 import {
   Menu,
   ChevronDown,
-  PlaneTakeoff,
-  Globe,
-  Rocket,
-  Search,
-  Package2,
-  GraduationCap,
+  CheckCircle,
+  BarChart2,
+  PieChart,
+  Users,
+  LineChart,
+  Briefcase,
   CircleDot,
 } from "lucide-react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
@@ -102,86 +102,86 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Announcement Banner */}
-      <div className="bg-[#00B5CA] text-white overflow-hidden py-1">
+      {/* Announcement Banner - Updated with GSK Consulting content */}
+      <div className="bg-[#e6b400] text-white overflow-hidden py-1">
         <div className="flex whitespace-nowrap">
           <motion.div
             className="flex items-center space-x-8 mx-4 text-sm font-medium"
             animate={bannerControls}
           >
             <div className="flex items-center gap-1.5">
-              <PlaneTakeoff size={14} className="stroke-[2.5]" />
-              <span>International Education Opportunities</span>
+              <Briefcase size={14} className="stroke-[2.5]" />
+              <span>Expert Business & Management Consulting</span>
             </div>
             <CircleDot size={6} className="opacity-60" />
             <div className="flex items-center gap-1.5">
-              <Globe size={14} className="stroke-[2.5]" />
-              <span>Build a Global Career in Logistics</span>
+              <Users size={14} className="stroke-[2.5]" />
+              <span>Client-Focused Project Management</span>
             </div>
             <CircleDot size={6} className="opacity-60" />
             <div className="flex items-center gap-1.5">
-              <Rocket size={14} className="stroke-[2.5]" />
-              <span>Master in Business Engineering (MBE)</span>
+              <BarChart2 size={14} className="stroke-[2.5]" />
+              <span>Strategic Business Growth Solutions</span>
             </div>
             <CircleDot size={6} className="opacity-60" />
             <div className="flex items-center gap-1.5">
-              <Search size={14} className="stroke-[2.5]" />
-              <span>Data Science for Logistics</span>
+              <PieChart size={14} className="stroke-[2.5]" />
+              <span>Data-Driven Decision Making</span>
             </div>
             <CircleDot size={6} className="opacity-60" />
             <div className="flex items-center gap-1.5">
-              <PlaneTakeoff size={14} className="stroke-[2.5]" />
-              <span>Drone Operations Program</span>
+              <LineChart size={14} className="stroke-[2.5]" />
+              <span>Performance Optimization</span>
             </div>
             <CircleDot size={6} className="opacity-60" />
             <div className="flex items-center gap-1.5">
-              <Package2 size={14} className="stroke-[2.5]" />
-              <span>Supply Chain Management</span>
+              <CheckCircle size={14} className="stroke-[2.5]" />
+              <span>Proven Track Record of Success</span>
             </div>
             <CircleDot size={6} className="opacity-60" />
             <div className="flex items-center gap-1.5">
-              <GraduationCap size={14} className="stroke-[2.5]" />
+              <Briefcase size={14} className="stroke-[2.5]" />
               <span>
-                Enroll Now for {currentYear}/{currentYear + 1} Intake
+                Trusted by Leading Businesses Since {currentYear - 10}
               </span>
             </div>
 
             {/* Second set for continuous scrolling */}
             <CircleDot size={6} className="opacity-60" />
             <div className="flex items-center gap-1.5">
-              <PlaneTakeoff size={14} className="stroke-[2.5]" />
-              <span>International Education Opportunities</span>
+              <Briefcase size={14} className="stroke-[2.5]" />
+              <span>Expert Business & Management Consulting</span>
             </div>
             <CircleDot size={6} className="opacity-60" />
             <div className="flex items-center gap-1.5">
-              <Globe size={14} className="stroke-[2.5]" />
-              <span>Build a Global Career in Logistics</span>
+              <Users size={14} className="stroke-[2.5]" />
+              <span>Client-Focused Project Management</span>
             </div>
             <CircleDot size={6} className="opacity-60" />
             <div className="flex items-center gap-1.5">
-              <Rocket size={14} className="stroke-[2.5]" />
-              <span>Master in Business Engineering (MBE)</span>
+              <BarChart2 size={14} className="stroke-[2.5]" />
+              <span>Strategic Business Growth Solutions</span>
             </div>
             <CircleDot size={6} className="opacity-60" />
             <div className="flex items-center gap-1.5">
-              <Search size={14} className="stroke-[2.5]" />
-              <span>Data Science for Logistics</span>
+              <PieChart size={14} className="stroke-[2.5]" />
+              <span>Data-Driven Decision Making</span>
             </div>
             <CircleDot size={6} className="opacity-60" />
             <div className="flex items-center gap-1.5">
-              <PlaneTakeoff size={14} className="stroke-[2.5]" />
-              <span>Drone Operations Program</span>
+              <LineChart size={14} className="stroke-[2.5]" />
+              <span>Performance Optimization</span>
             </div>
             <CircleDot size={6} className="opacity-60" />
             <div className="flex items-center gap-1.5">
-              <Package2 size={14} className="stroke-[2.5]" />
-              <span>Supply Chain Management</span>
+              <CheckCircle size={14} className="stroke-[2.5]" />
+              <span>Proven Track Record of Success</span>
             </div>
             <CircleDot size={6} className="opacity-60" />
             <div className="flex items-center gap-1.5">
-              <GraduationCap size={14} className="stroke-[2.5]" />
+              <Briefcase size={14} className="stroke-[2.5]" />
               <span>
-                Enroll Now for {currentYear}/{currentYear + 1} Intake
+                Trusted by Leading Businesses Since {currentYear - 10}
               </span>
             </div>
           </motion.div>
@@ -198,20 +198,20 @@ const Navbar = () => {
           <Link to="/" className="flex items-center">
             <img
               src="/logos/logo_full.png"
-              alt="IILOS Logo"
+              alt="GSK Consulting Logo"
               className="h-18 object-contain"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex uppercase space-x-8">
             <NavLink
               to="/"
               end
               className={({ isActive }) =>
                 isActive
-                  ? "font-medium text-[#00B5CA] relative nav-link nav-link-active"
-                  : "font-medium text-gray-700 hover:text-[#00B5CA] relative nav-link transition-colors"
+                  ? "font-medium uppercase text-[#e6b400] relative nav-link nav-link-active"
+                  : "font-medium text-gray-700 hover:text-[#e6b400] relative nav-link transition-colors"
               }
             >
               Home
@@ -221,37 +221,37 @@ const Navbar = () => {
               to="/about"
               className={({ isActive }) =>
                 isActive
-                  ? "font-medium text-[#00B5CA] relative nav-link nav-link-active"
-                  : "font-medium text-gray-700 hover:text-[#00B5CA] relative nav-link transition-colors"
+                  ? "font-medium uppercase text-[#e6b400] relative nav-link nav-link-active"
+                  : "font-medium uppercase text-gray-700 hover:text-[#e6b400] relative nav-link transition-colors"
               }
             >
               About
             </NavLink>
 
-            {/* Higher Education Dropdown - Contains PG diploma programs */}
+            {/* Services Dropdown - Updated from Higher Education */}
             <div className="relative">
               {/* Button trigger only - reduced hitbox */}
               <div
                 className="flex items-center space-x-1 cursor-pointer"
-                onMouseEnter={() => showDropdown("higher")}
+                onMouseEnter={() => showDropdown("services")}
                 onMouseLeave={hideDropdown}
               >
                 <NavLink
-                  to="/higher-education/data-science"
+                  to="/services"
                   className={({ isActive }) =>
                     isActive
-                      ? "font-medium text-[#00B5CA] relative nav-link nav-link-active"
-                      : "font-medium text-gray-700 hover:text-[#00B5CA] relative nav-link transition-colors"
+                      ? "font-medium text-[#e6b400] relative nav-link nav-link-active"
+                      : "font-medium text-gray-700 hover:text-[#e6b400] relative nav-link transition-colors"
                   }
                 >
-                  Higher Education
+                  Services
                 </NavLink>
                 <ChevronDown
                   size={16}
                   className={`transition-colors ${
-                    isPathActive("/higher-education")
-                      ? "text-[#00B5CA]"
-                      : "text-gray-600 hover:text-[#00B5CA]"
+                    isPathActive("/services")
+                      ? "text-[#e6b400]"
+                      : "text-gray-600 hover:text-[#e6b400]"
                   }`}
                 />
               </div>
@@ -259,62 +259,62 @@ const Navbar = () => {
               {/* Dropdown Menu */}
               <div
                 className="absolute left-0 top-full pt-2"
-                onMouseEnter={() => showDropdown("higher")}
+                onMouseEnter={() => showDropdown("services")}
                 onMouseLeave={hideDropdown}
               >
                 <div
                   className={`bg-white shadow-lg rounded-md py-2 w-72 transform transition-all duration-200 ${
-                    activeDropdown === "higher"
+                    activeDropdown === "services"
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 -translate-y-2 pointer-events-none"
                   }`}
                 >
                   <Link
-                    to="/higher-education/supply-chain"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#00B5CA]"
+                    to="/services/business-consulting"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#e6b400]"
                   >
-                    PG Dip. in Supply Chain And Logistics Mgmt
+                    Business & Management Consulting
                   </Link>
                   <Link
-                    to="/higher-education/drone-operations"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#00B5CA]"
+                    to="/services/project-management"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#e6b400]"
                   >
-                    PG Dip. in Drones Operations- Logistics
+                    Project Management Services
                   </Link>
                   <Link
-                    to="/higher-education/data-science"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#00B5CA]"
+                    to="/services/strategy"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#e6b400]"
                   >
-                    PG Dip. in Data Science For Logistics
+                    Strategic Planning & Execution
                   </Link>
                 </div>
               </div>
             </div>
 
-            {/* International Education Dropdown - Now contains MBE */}
+            {/* Industries Dropdown - Updated from International Education */}
             <div className="relative">
               {/* Button trigger only - reduced hitbox */}
               <div
                 className="flex items-center space-x-1 cursor-pointer"
-                onMouseEnter={() => showDropdown("international")}
+                onMouseEnter={() => showDropdown("industries")}
                 onMouseLeave={hideDropdown}
               >
                 <NavLink
-                  to="/international-education"
+                  to="/industries"
                   className={({ isActive }) =>
                     isActive
-                      ? "font-medium text-[#00B5CA] relative nav-link nav-link-active"
-                      : "font-medium text-gray-700 hover:text-[#00B5CA] relative nav-link transition-colors"
+                      ? "font-medium text-[#e6b400] relative nav-link nav-link-active"
+                      : "font-medium text-gray-700 hover:text-[#e6b400] relative nav-link transition-colors"
                   }
                 >
-                  International Education
+                  Industries
                 </NavLink>
                 <ChevronDown
                   size={16}
                   className={`transition-colors ${
-                    isPathActive("/international-education")
-                      ? "text-[#00B5CA]"
-                      : "text-gray-600 hover:text-[#00B5CA]"
+                    isPathActive("/industries")
+                      ? "text-[#e6b400]"
+                      : "text-gray-600 hover:text-[#e6b400]"
                   }`}
                 />
               </div>
@@ -322,21 +322,33 @@ const Navbar = () => {
               {/* Dropdown Menu */}
               <div
                 className="absolute left-0 top-full pt-2"
-                onMouseEnter={() => showDropdown("international")}
+                onMouseEnter={() => showDropdown("industries")}
                 onMouseLeave={hideDropdown}
               >
                 <div
                   className={`bg-white shadow-lg rounded-md py-2 w-64 transform transition-all duration-200 ${
-                    activeDropdown === "international"
+                    activeDropdown === "industries"
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 -translate-y-2 pointer-events-none"
                   }`}
                 >
                   <Link
-                    to="/international-education/mbe"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#00B5CA]"
+                    to="/industries/manufacturing"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#e6b400]"
                   >
-                    Master in Business Engineering (MBE)
+                    Manufacturing
+                  </Link>
+                  <Link
+                    to="/industries/technology"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#e6b400]"
+                  >
+                    Technology
+                  </Link>
+                  <Link
+                    to="/industries/healthcare"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#e6b400]"
+                  >
+                    Healthcare
                   </Link>
                 </div>
               </div>
@@ -346,8 +358,8 @@ const Navbar = () => {
               to="/contact"
               className={({ isActive }) =>
                 isActive
-                  ? "font-medium text-[#00B5CA] relative nav-link nav-link-active"
-                  : "font-medium text-gray-700 hover:text-[#00B5CA] relative nav-link transition-colors"
+                  ? "font-medium text-[#e6b400] relative nav-link nav-link-active"
+                  : "font-medium text-gray-700 hover:text-[#e6b400] relative nav-link transition-colors"
               }
             >
               Contact
@@ -356,14 +368,16 @@ const Navbar = () => {
 
           {/* Contact Button (Desktop) */}
           <div className="hidden md:block">
-            <Button to="/contact">ENROLL NOW</Button>
+            <Button to="/contact" color="yellow">
+              GET STARTED
+            </Button>
           </div>
 
           {/* Mobile Menu Toggle */}
           <motion.button
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsMenuOpen(true)}
-            className="md:hidden text-gray-700 hover:text-[#00B5CA]"
+            className="md:hidden text-gray-700 hover:text-[#e6b400]"
             aria-label="Open menu"
           >
             <Menu size={28} />
@@ -402,7 +416,7 @@ const Navbar = () => {
           height: 2px;
           bottom: -2px;
           left: 0;
-          background-color: #00b5ca;
+          background-color: #e6b400;
           transform: scaleX(0);
           transform-origin: left;
           transition: transform 0.3s ease-out;

@@ -5,8 +5,8 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import HigherEducation from "./pages/HigherEducation";
-import InternationalEducation from "./pages/InternationalEducation";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Services from "./pages/Services"; // Added the Services import
 
 const router = createBrowserRouter([
   {
@@ -26,14 +26,12 @@ const router = createBrowserRouter([
         element: <ContactPage />,
       },
       {
-        path: "higher-education",
-        // Swapped component - Higher Education route renders International component
-        element: <InternationalEducation />,
+        path: "services",
+        element: <Services />,
       },
       {
-        path: "higher-education/:courseSlug",
-        // Swapped component - Higher Education route renders International component
-        element: <InternationalEducation />,
+        path: "services/:serviceSlug",
+        element: <Services />,
       },
       {
         path: "international-education",

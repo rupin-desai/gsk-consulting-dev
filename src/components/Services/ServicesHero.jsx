@@ -2,15 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import Button from "../../ui/Components/Button";
 
-const InterHero = ({ data }) => {
-  // Function to scroll directly to the program-info section
+const ServicesHero = ({ data }) => {
+  // Function to scroll directly to the service-info section
   const scrollToNextSection = () => {
-    const programInfoSection = document.getElementById("program-info");
-    if (programInfoSection) {
+    const serviceInfoSection = document.getElementById("service-info");
+    if (serviceInfoSection) {
       // Get the navbar height to offset the scroll position
       const navbarHeight = 80; // Estimated height of the navbar
       const sectionPosition =
-        programInfoSection.getBoundingClientRect().top +
+        serviceInfoSection.getBoundingClientRect().top +
         window.pageYOffset -
         navbarHeight;
 
@@ -45,7 +45,7 @@ const InterHero = ({ data }) => {
           </motion.h1>
 
           <motion.h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#00B5CA]"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#e6b400]"
             initial={{ opacity: 0, translateY: 20 }}
             animate={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 0.4, delay: 0.2 }}
@@ -68,9 +68,11 @@ const InterHero = ({ data }) => {
             animate={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <Button onClick={scrollToNextSection}>Explore Program</Button>
+            <Button onClick={scrollToNextSection} color="yellow">
+              Explore Services
+            </Button>
             <Button to="/contact" variant="outline" color="white">
-              Enroll Now
+              Get in Touch
             </Button>
           </motion.div>
         </div>
@@ -79,4 +81,4 @@ const InterHero = ({ data }) => {
   );
 };
 
-export default InterHero;
+export default ServicesHero;

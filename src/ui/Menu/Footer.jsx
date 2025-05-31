@@ -12,67 +12,66 @@ const Footer = () => {
             <Link to="/">
               <img
                 src="/logos/logo_full.png"
-                alt="IILOS Logo"
+                alt="GSK Consulting Logo"
                 className="h-24 md:h-24 "
               />
             </Link>
             <p className="text-gray-600 mt-4 text-center md:text-left">
-              Empowering education and innovation in logistics and supply chain
-              management.
+              Your trusted partner in consulting and project management.
             </p>
           </div>
 
-          {/* Programs Section */}
+          {/* Services Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-[#00B5CA]">
-              Programs that We Provide
+            <h3 className="text-lg font-semibold mb-4 text-[#e6b400]">
+              Our Services
             </h3>
             <ul className="space-y-2">
-              <li className="text-gray-600 hover:text-[#00B5CA] transition-colors">
-                <Link to="/international-education/mbe">
-                  Master in Business Engineering (MBE)
+              <li className="text-gray-600 hover:text-[#e6b400] transition-colors">
+                <Link to="/services/business-consulting">
+                  Business & Management Consulting
                 </Link>
               </li>
-              <li className="text-gray-600 hover:text-[#00B5CA] transition-colors">
-                <Link to="/higher-education/data-science">
-                  PG Dip. in Data Science For Logistics
+              <li className="text-gray-600 hover:text-[#e6b400] transition-colors">
+                <Link to="/services/project-management">
+                  Project Management Services
                 </Link>
               </li>
-              <li className="text-gray-600 hover:text-[#00B5CA] transition-colors">
-                <Link to="/higher-education/drone-operations">
-                  PG Dip. in Drones Operations- Logistics
+              <li className="text-gray-600 hover:text-[#e6b400] transition-colors">
+                <Link to="/services/custom-solutions">
+                  Customized Solutions
                 </Link>
               </li>
-              <li className="text-gray-600 hover:text-[#00B5CA] transition-colors">
-                <Link to="/higher-education/supply-chain">
-                  PG Dip. in Supply Chain And Logistics Mgmt
-                </Link>
+              <li className="text-gray-600 hover:text-[#e6b400] transition-colors">
+                <Link to="/services/strategy">Strategic Planning</Link>
               </li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-[#00B5CA]">
-              Contact US
+            <h3 className="text-lg font-semibold mb-4 text-[#e6b400]">
+              Contact Us
             </h3>
             <ul className="space-y-3">
               <li className="flex items-center">
-                <Phone size={20} className="mr-2 text-[#00B5CA]" />
-                <span className="text-gray-600 hover:text-[#00B5CA]">
+                <Phone size={20} className="mr-2 text-[#e6b400]" />
+                <span className="text-gray-600 hover:text-[#e6b400]">
                   <a href="tel:+9193226 06890">(+91) 93226 06890</a>
                 </span>
               </li>
               <li className="flex items-center">
-                <Mail size={20} className="mr-2 text-[#00B5CA]" />
-                <span className="text-gray-600 hover:text-[#00B5CA]">
-                  <a href="mailto:contactus@iilos.org">contactus@iilos.org</a>
+                <Mail size={20} className="mr-2 text-[#e6b400]" />
+                <span className="text-gray-600 hover:text-[#e6b400]">
+                  <a href="mailto:info@gskconsulting.com">
+                    info@gskconsulting.com
+                  </a>
                 </span>
               </li>
               <li className="flex items-start">
                 <MapPin
                   size={20}
-                  className="mr-2 text-[#00B5CA] flex-shrink-0 mt-1"
+                  className="mr-2 text-[#e6b400] flex-shrink-0 mt-1"
                 />
                 <span className="text-gray-600">
                   Sector 12, Kharghar, Navi Mumbai,
@@ -87,7 +86,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="pt-6 border-t border-gray-200 flex flex-col md:flex-row justify-center items-center">
           <p className="text-gray-600 text-sm mb-2 md:mb-0">
-            Copyright Reserved by DBS IDEaAS Foundation.
+            © {new Date().getFullYear()} GSK Consulting. All Rights Reserved.
           </p>
         </div>
       </div>

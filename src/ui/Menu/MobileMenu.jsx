@@ -68,14 +68,14 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
         <Link to="/" onClick={() => setIsOpen(false)}>
           <img
             src="/logos/logo_full.png"
-            alt="IILOS Logo"
+            alt="GSK Consulting Logo"
             className="h-24 object-contain"
           />
         </Link>
         <button
           onClick={() => setIsOpen(false)}
           aria-label="Close menu"
-          className="text-gray-700 hover:text-[#00B5CA] p-2"
+          className="text-gray-700 hover:text-[#e6b400] p-2"
         >
           <X size={24} />
         </button>
@@ -84,7 +84,7 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
       <div className="flex-1 overflow-y-auto p-5 space-y-6">
         <Link
           to="/"
-          className="block py-2 text-gray-700 hover:text-[#00B5CA] font-medium transition-colors"
+          className="block py-2 text-gray-700 hover:text-[#e6b400] font-medium transition-colors"
           onClick={() => setIsOpen(false)}
         >
           Home
@@ -92,7 +92,7 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
 
         <Link
           to="/about"
-          className="block py-2 text-gray-700 hover:text-[#00B5CA] font-medium transition-colors"
+          className="block py-2 text-gray-700 hover:text-[#e6b400] font-medium transition-colors"
           onClick={() => setIsOpen(false)}
         >
           About
@@ -104,18 +104,18 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
             className="flex justify-between items-center cursor-pointer group"
             onClick={() => toggleSubmenu("higher")}
           >
-            <span className="text-gray-700 group-hover:text-[#00B5CA] font-medium transition-colors">
+            <span className="text-gray-700 group-hover:text-[#e6b400] font-medium transition-colors">
               Higher Education
             </span>
             {expandedMenus.higher ? (
               <ChevronUp
                 size={20}
-                className="text-gray-500 group-hover:text-[#00B5CA] transition-colors"
+                className="text-gray-500 group-hover:text-[#e6b400] transition-colors"
               />
             ) : (
               <ChevronDown
                 size={20}
-                className="text-gray-500 group-hover:text-[#00B5CA] transition-colors"
+                className="text-gray-500 group-hover:text-[#e6b400] transition-colors"
               />
             )}
           </div>
@@ -129,21 +129,21 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
             >
               <Link
                 to="/higher-education/supply-chain"
-                className="block py-2 text-gray-600 hover:text-[#00B5CA] transition-colors"
+                className="block py-2 text-gray-600 hover:text-[#e6b400] transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 PG Dip. in Supply Chain And Logistics Mgmt
               </Link>
               <Link
                 to="/higher-education/drone-operations"
-                className="block py-2 text-gray-600 hover:text-[#00B5CA] transition-colors"
+                className="block py-2 text-gray-600 hover:text-[#e6b400] transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 PG Dip. in Drones Operations- Logistics
               </Link>
               <Link
                 to="/higher-education/data-science"
-                className="block py-2 text-gray-600 hover:text-[#00B5CA] transition-colors"
+                className="block py-2 text-gray-600 hover:text-[#e6b400] transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 PG Dip. in Data Science For Logistics
@@ -158,18 +158,18 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
             className="flex justify-between items-center cursor-pointer group"
             onClick={() => toggleSubmenu("international")}
           >
-            <span className="text-gray-700 group-hover:text-[#00B5CA] font-medium transition-colors">
+            <span className="text-gray-700 group-hover:text-[#e6b400] font-medium transition-colors">
               International Education
             </span>
             {expandedMenus.international ? (
               <ChevronUp
                 size={20}
-                className="text-gray-500 group-hover:text-[#00B5CA] transition-colors"
+                className="text-gray-500 group-hover:text-[#e6b400] transition-colors"
               />
             ) : (
               <ChevronDown
                 size={20}
-                className="text-gray-500 group-hover:text-[#00B5CA] transition-colors"
+                className="text-gray-500 group-hover:text-[#e6b400] transition-colors"
               />
             )}
           </div>
@@ -183,7 +183,7 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
             >
               <Link
                 to="/international-education/mbe"
-                className="block py-2 text-gray-600 hover:text-[#00B5CA] transition-colors"
+                className="block py-2 text-gray-600 hover:text-[#e6b400] transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Master in Business Engineering (MBE)
@@ -194,7 +194,7 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
 
         <Link
           to="/contact"
-          className="block py-2 text-gray-700 hover:text-[#00B5CA] font-medium transition-colors"
+          className="block py-2 text-gray-700 hover:text-[#e6b400] font-medium transition-colors"
           onClick={() => setIsOpen(false)}
         >
           Contact
@@ -202,7 +202,7 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
 
         <Link
           to="/contact"
-          className="block bg-[#00B5CA] text-white px-6 py-3 rounded-md hover:bg-opacity-90 transition-colors text-center mt-6"
+          className="block bg-[#e6b400] text-white px-6 py-3 rounded-md hover:bg-opacity-90 transition-colors text-center mt-6"
           onClick={() => setIsOpen(false)}
         >
           Get Started
