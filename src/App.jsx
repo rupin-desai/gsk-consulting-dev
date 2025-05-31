@@ -4,9 +4,9 @@ import Mainlayout from "./layouts/Mainlayout";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
-import HigherEducation from "./pages/HigherEducation";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import Services from "./pages/Services"; // Added the Services import
+import Services from "./pages/Services";
+import Industries from "./pages/Industries"; // Added Industries import
 
 const router = createBrowserRouter([
   {
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     element: <Mainlayout />,
     children: [
       {
-        index: true, // This makes HomePage the default route
+        index: true,
         element: <HomePage />,
       },
       {
@@ -34,14 +34,12 @@ const router = createBrowserRouter([
         element: <Services />,
       },
       {
-        path: "international-education",
-        // Swapped component - International route renders Higher component
-        element: <HigherEducation />,
+        path: "industries",
+        element: <Industries />,
       },
       {
-        path: "international-education/:courseSlug",
-        // Swapped component - International route renders Higher component
-        element: <HigherEducation />,
+        path: "industries/:industrySlug",
+        element: <Industries />,
       },
       {
         path: "privacy-policy",
