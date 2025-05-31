@@ -5,12 +5,14 @@ import HomeAbout from "../components/Home/HomeAbout";
 import HomeWhyUs from "../components/Home/HomeWhyUs";
 import HomeInfo from "../components/Home/HomeInfo";
 import HomeColabs from "../components/Home/HomeColabs";
+import HomeStats from "../components/Home/HomeStats";
 
 const HomePage = () => {
   return (
     <>
       <Homehero />
-      <HomeBanner />
+      {/* <HomeBanner /> */}
+      <HomeStats />
       <HomeAbout />
       <HomeWhyUs />
       <HomeInfo />
